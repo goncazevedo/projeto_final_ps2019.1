@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board: one
+  cell: one
+  name: MyString
+  deadline: 2019-02-11
+  finished: false
+
+two:
+  board: two
+  cell: two
+  name: MyString
+  deadline: 2019-02-11
+  finished: false

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @user.board %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @user.cell %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Cell kind:</strong>
+  <%= @user.cell_kind %>
+</p>
+
+<p>
+  <strong>Board kind:</strong>
+  <%= @user.board_kind %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @user.photo %>
+</p>
+
+<p>
+  <strong>Creation cell:</strong>
+  <%= @user.creation_cell %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

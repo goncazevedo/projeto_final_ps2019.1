@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Board</th>
+      <th>Cell</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cell kind</th>
+      <th>Board kind</th>
+      <th>Photo</th>
+      <th>Creation cell</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.board %></td>
+        <td><%= user.cell %></td>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td><%= user.cell_kind %></td>
+        <td><%= user.board_kind %></td>
+        <td><%= user.photo %></td>
+        <td><%= user.creation_cell %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

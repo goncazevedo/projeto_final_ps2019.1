@@ -1,0 +1,27 @@
+<%= form_with(model: cell, local: true) do |form| %>
+  <% if cell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cell.errors.count, "error") %> prohibited this cell from being saved:</h2>
+
+      <ul>
+      <% cell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
