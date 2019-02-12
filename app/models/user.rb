@@ -34,7 +34,7 @@ class User < ApplicationRecord
   }
 
   private
-    def projects_board?
+    def projects_board? #TODO
       Board.find_by(id: :board_id) == 0
     end
     
