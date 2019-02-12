@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_123814) do
+ActiveRecord::Schema.define(version: 2019_02_12_212052) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -44,16 +44,24 @@ ActiveRecord::Schema.define(version: 2019_02_12_123814) do
     t.index ["user_id"], name: "index_fusions_on_user_id"
   end
 
-  create_table "goals", force: :cascade do |t|
-    t.integer "board_id"
-    t.integer "cell_id"
+  create_table "goal_boards", force: :cascade do |t|
     t.string "name"
     t.date "deadline"
     t.boolean "finished"
+    t.integer "board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_goals_on_board_id"
-    t.index ["cell_id"], name: "index_goals_on_cell_id"
+    t.index ["board_id"], name: "index_goal_boards_on_board_id"
+  end
+
+  create_table "goal_cells", force: :cascade do |t|
+    t.string "name"
+    t.date "deadline"
+    t.boolean "finished"
+    t.integer "cell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cell_id"], name: "index_goal_cells_on_cell_id"
   end
 
   create_table "likes", force: :cascade do |t|

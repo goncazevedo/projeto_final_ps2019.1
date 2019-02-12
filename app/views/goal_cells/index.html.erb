@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Goal Cells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Deadline</th>
+      <th>Finished</th>
+      <th>Cell</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goal_cells.each do |goal_cell| %>
+      <tr>
+        <td><%= goal_cell.name %></td>
+        <td><%= goal_cell.deadline %></td>
+        <td><%= goal_cell.finished %></td>
+        <td><%= goal_cell.cell %></td>
+        <td><%= link_to 'Show', goal_cell %></td>
+        <td><%= link_to 'Edit', edit_goal_cell_path(goal_cell) %></td>
+        <td><%= link_to 'Destroy', goal_cell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goal Cell', new_goal_cell_path %>

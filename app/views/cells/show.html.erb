@@ -10,5 +10,7 @@
   <%= @cell.description %>
 </p>
 
+<%= render 'goal_cells/form', {board: @board, goal_cell: GoalCell.new} %>
+
 <%= link_to 'Edit', edit_cell_path(@cell) %> |
 <%= link_to 'Back', cells_path %>
