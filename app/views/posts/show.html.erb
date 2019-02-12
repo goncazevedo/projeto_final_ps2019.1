@@ -15,10 +15,10 @@
   <%= @post.content %>
 </p>
 
-<p>
+<% if @post.photo.present? %>
   <strong>Photo:</strong>
-  <%= @post.photo %>
-</p>
+  <%= image_tag (@post.photo.url) %>
+<% end %>
 
 <p>
   <strong>Kind:</strong>
