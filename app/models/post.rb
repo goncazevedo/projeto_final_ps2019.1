@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   belongs_to :user
+  
+  has_many :likes, dependent: :destroy
 
   #Relação N pra N
   has_many :post_tags

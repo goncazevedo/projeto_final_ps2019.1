@@ -5,11 +5,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  
 
   belongs_to :board
   belongs_to :cell
 
+  has_many :likes, dependent: :destroy
   has_many :posts
 
   #Relação N pra N
