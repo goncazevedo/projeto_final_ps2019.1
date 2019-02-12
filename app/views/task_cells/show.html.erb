@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task_cell.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task_cell.description %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @task_cell.finished %>
+</p>
+
+<p>
+  <strong>Goal cell:</strong>
+  <%= @task_cell.goal_cell %>
+</p>
+
+<%= link_to 'Edit', edit_task_cell_path(@task_cell) %> |
+<%= link_to 'Back', task_cells_path %>

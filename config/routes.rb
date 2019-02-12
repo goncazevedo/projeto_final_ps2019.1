@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :task_cells
+  resources :task_boards
   resources :goal_cells
   resources :goal_boards
   devise_for :users
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
   resources :fusions
   resources :project_users
   resources :users
-  resources :tasks
   resources :boards
   resources :cells
   resources :projects

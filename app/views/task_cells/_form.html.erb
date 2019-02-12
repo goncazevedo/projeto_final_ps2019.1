@@ -1,20 +1,15 @@
-<%= form_with(model: task, local: true) do |form| %>
-  <% if task.errors.any? %>
+<%= form_with(model: task_cell, local: true) do |form| %>
+  <% if task_cell.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+      <h2><%= pluralize(task_cell.errors.count, "error") %> prohibited this task_cell from being saved:</h2>
 
       <ul>
-      <% task.errors.full_messages.each do |message| %>
+      <% task_cell.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :goal_id %>
-    <%= form.text_field :goal_id %>
-  </div>
 
   <div class="field">
     <%= form.label :name %>
@@ -29,6 +24,11 @@
   <div class="field">
     <%= form.label :finished %>
     <%= form.check_box :finished %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal_cell_id %>
+    <%= form.text_field :goal_cell_id %>
   </div>
 
   <div class="actions">

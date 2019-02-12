@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task_board.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task_board.description %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @task_board.finished %>
+</p>
+
+<p>
+  <strong>Goal board:</strong>
+  <%= @task_board.goal_board %>
+</p>
+
+<%= link_to 'Edit', edit_task_board_path(@task_board) %> |
+<%= link_to 'Back', task_boards_path %>

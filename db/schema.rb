@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_212052) do
+ActiveRecord::Schema.define(version: 2019_02_12_214924) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -116,14 +116,24 @@ ActiveRecord::Schema.define(version: 2019_02_12_212052) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tasks", force: :cascade do |t|
-    t.integer "goal_id"
+  create_table "task_boards", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.boolean "finished"
+    t.integer "goal_board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["goal_id"], name: "index_tasks_on_goal_id"
+    t.index ["goal_board_id"], name: "index_task_boards_on_goal_board_id"
+  end
+
+  create_table "task_cells", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "finished"
+    t.integer "goal_cell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["goal_cell_id"], name: "index_task_cells_on_goal_cell_id"
   end
 
   create_table "users", force: :cascade do |t|
