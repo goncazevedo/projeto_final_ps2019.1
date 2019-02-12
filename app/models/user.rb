@@ -10,6 +10,8 @@ class User < ApplicationRecord
   belongs_to :cell
 
   has_many :likes, dependent: :destroy
+  has_many :dislikes, dependent: :destroy
+  
   has_many :posts
 
   #Relação N pra N

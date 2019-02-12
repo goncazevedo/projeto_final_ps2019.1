@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to:  "users#index"
-  resources :post_tags
   resources :posts do
+    resources :dislikes
     resources :likes
   end
+  resources :post_tags
   resources :fusions
   resources :project_users
   resources :users
