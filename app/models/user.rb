@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
+
   belongs_to :board
   belongs_to :cell
 

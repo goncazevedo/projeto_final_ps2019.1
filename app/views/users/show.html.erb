@@ -30,10 +30,10 @@
   <%= @user.board_kind %>
 </p>
 
-<p>
+<% if @user.photo.present? %>
   <strong>Photo:</strong>
-  <%= @user.photo %>
-</p>
+  <%= image_tag (@user.photo.url) %>
+<% end %>
 
 <p>
   <strong>Creation cell:</strong>
