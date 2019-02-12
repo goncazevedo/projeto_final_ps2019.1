@@ -7,6 +7,10 @@ class DislikesController < ApplicationController
             @dislike.destroy(@dislike.ids)
         else
             @post.dislikes.create(user_id: current_user.id)
+            @like = @post.likes.where(user_id: current_user.id)
+            if @like
+                @post.likes.destroy(@like)
+            end
         end
         redirect_to post_path(@post)
     end
@@ -23,5 +27,17 @@ class DislikesController < ApplicationController
 
         def already_disliked?
             Dislike.where(user_id: current_user.id, post_id: params[:post_id]).exists?
+        end
+
+        def already_liked?
+            Like.where(user_id: current_user.id, post_id: params[:post_id]).exists?
+        end
+
+        def switch_like
+            if already_liked?
+                return false
+            else
+                return true
+            end
         end
 end
