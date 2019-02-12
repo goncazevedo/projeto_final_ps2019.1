@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_002241) do
+ActiveRecord::Schema.define(version: 2019_02_12_155007) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2019_02_12_002241) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dislikes", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_dislikes_on_post_id"
+    t.index ["user_id"], name: "index_dislikes_on_user_id"
   end
 
   create_table "fusions", force: :cascade do |t|
@@ -45,6 +54,15 @@ ActiveRecord::Schema.define(version: 2019_02_12_002241) do
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_goals_on_board_id"
     t.index ["cell_id"], name: "index_goals_on_cell_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_likes_on_post_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "post_tags", force: :cascade do |t|
@@ -116,6 +134,7 @@ ActiveRecord::Schema.define(version: 2019_02_12_002241) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.boolean "admin"
     t.index ["board_id"], name: "index_users_on_board_id"
     t.index ["cell_id"], name: "index_users_on_cell_id"
     t.index ["email"], name: "index_users_on_email", unique: true

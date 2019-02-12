@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+#Seed do Arthur
+Board.create(name: 'Projetos', description: 'Diretoria de Projetos')
+Cell.create(name: 'PMO', description: 'Célula de PMO')
+
+Board.create(name: "Financeiro", description: "Diretoria Financeira")
+Cell.create(name: " ", description: "Célula Vazia")
+
+User.create(name: "Natalia Coinbra", age: 18, email:"natalia@email.com", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0,)

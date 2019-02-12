@@ -5,11 +5,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  
 
   belongs_to :board
   belongs_to :cell
 
+  has_many :likes, dependent: :destroy
+  has_many :dislikes, dependent: :destroy
+  
   has_many :posts
 
   #Relação N pra N
@@ -34,7 +36,7 @@ class User < ApplicationRecord
   }
 
   private
-    def projects_board?
+    def projects_board? #TODO
       Board.find_by(id: :board_id) == 0
     end
     
