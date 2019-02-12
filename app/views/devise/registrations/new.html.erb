@@ -51,7 +51,7 @@
 
   <div class="field">
     <%= f.label :cell_id %>
-    <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' }) %>
+    <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' }) %><!--to-do-->
   </div>
 
   <div class="field">

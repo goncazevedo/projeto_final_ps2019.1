@@ -25,5 +25,11 @@
   <%= @post.kind %>
 </p>
 
+<%= button_to 'Like', post_likes_path(@post), method: :post %>
+<p><%=@post.likes.length%></p>
+
+<%= button_to 'Dislike', post_dislikes_path(@post), method: :post %>
+<p><%=@post.dislikes.length%></p>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
