@@ -10,7 +10,21 @@
   <%= @cell.description %>
 </p>
 
+<p>
+  <strong>Manager</strong>
+  <%= @manager.name %>
+  <%= link_to "Profile", @manager %>
+</p>
 
+<p>
+  <strong>Members</strong>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member.name %>
+      <%= link_to "Profile", member %></li>
+    <% end %>
+  </ul>
+</p>
 
 <ul>
 <% @goals.each do |goal| %>

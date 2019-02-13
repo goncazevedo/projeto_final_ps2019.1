@@ -10,7 +10,21 @@
   <%= @board.description %>
 </p>
 
+<p>
+  <strong>Director</strong>
+  <%= @director.name %>
+  <%= link_to "Profile", @director %>
+</p>
 
+<p>
+  <strong>Accessors</strong>
+  <ul>
+    <% @accessors.each do |accessor| %>
+      <li><%= accessor.name %>
+      <%= link_to "Profile", accessor %></li>
+    <% end %>
+  </ul>
+</p>
 
 <ul>
 <% @goals.each do |goal| %>
