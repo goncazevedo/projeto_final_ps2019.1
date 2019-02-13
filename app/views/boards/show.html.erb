@@ -10,6 +10,15 @@
   <%= @board.description %>
 </p>
 
+<ul>
+<% @goals.each do |goal| %>
+  <li><%= goal.name %></li>
+  <li><%= link_to "Show", goal_board_path(goal) %></li>
+  <li><%= link_to "Edit (Não Funciona)", edit_goal_board_path(goal, board: @board) %></li>
+  <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+<% end %>
+</ul>
+
 <%= render 'goal_boards/form', {board: @board, goal_board: GoalBoard.new} %>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
