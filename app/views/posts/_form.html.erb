@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :kind %>
-    <%= form.number_field :kind %>
+    <%= form.hidden_field :kind, value: kind%>
   </div>
 
   <div class="actions">

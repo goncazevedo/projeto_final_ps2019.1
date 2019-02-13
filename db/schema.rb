@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_214924) do
+ActiveRecord::Schema.define(version: 2019_02_12_233840) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -103,6 +103,18 @@ ActiveRecord::Schema.define(version: 2019_02_12_214924) do
     t.index ["cell_id"], name: "index_goal_cells_on_cell_id"
   end
 
+  create_table "goals", force: :cascade do |t|
+    t.integer "board_id"
+    t.integer "cell_id"
+    t.string "name"
+    t.date "deadline"
+    t.boolean "finished"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_goals_on_board_id"
+    t.index ["cell_id"], name: "index_goals_on_cell_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.integer "post_id"
     t.integer "user_id"
@@ -173,6 +185,16 @@ ActiveRecord::Schema.define(version: 2019_02_12_214924) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["goal_cell_id"], name: "index_task_cells_on_goal_cell_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "goal_id"
+    t.string "name"
+    t.text "description"
+    t.boolean "finished"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["goal_id"], name: "index_tasks_on_goal_id"
   end
 
   create_table "users", force: :cascade do |t|

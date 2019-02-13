@@ -11,4 +11,11 @@ class Post < ApplicationRecord
   #Relação N pra N
   has_many :post_tags
   has_many :tag, through: :post_tags
+
+  enum kind: {
+    article: 0,
+    question: 1
+  }
+
+
 end

@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.name %>
 </p>
 
 <p>
@@ -34,4 +34,8 @@
 <%= commontator_thread(@post) %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%if @post.kind == "article"%>
+  <%= link_to 'Back', articles_path %>
+<%elsif @post.kind == "question"%>
+  <%= link_to 'Back', forum_path %>
+<%end%>

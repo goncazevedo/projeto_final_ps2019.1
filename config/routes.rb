@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   resources :goal_boards
   devise_for :users
   root to:  "users#index"
+  
+  get "/articles", to: "posts#articles"
+  get "/articles/new", to: "posts#new_article", as: "new_article"
+  get "/forum", to: "posts#forum"
+  get "/question/new", to: "posts#new_question", as: "new_question"
+  
   resources :posts do
     resources :dislikes
     resources :likes
