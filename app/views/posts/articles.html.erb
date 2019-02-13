@@ -14,15 +14,21 @@
   <tbody>
     <% @articles.each do |article| %>
         <tr>
-            <td><%= article.user.name %></td>
-            <td><%= article.title %></td>
-            <td><%= link_to 'Show', article %></td>
-            <%if can? :edit, article%>
-                <td><%= link_to 'Edit', edit_post_path(article) %></td>
-            <%end%>
-            <%if can? :destroy, article%>
-                <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <%end%>
+          <td>
+            <% if article.user.photo.present? %>
+              <%= image_tag (article.user.photo.url) %>
+            <% end %>
+          </td>
+          <td><%= article.user.name %></td>
+          <td><%= article.title %></td>
+          <td><%= article.created_at.to_date%></td>
+          <td><%= link_to 'Show', article %></td>
+          <%if can? :edit, article%>
+              <td><%= link_to 'Edit', edit_post_path(article) %></td>
+          <%end%>
+          <%if can? :destroy, article%>
+              <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%end%>
         </tr>
     <% end %>
   </tbody>

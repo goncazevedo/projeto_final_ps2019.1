@@ -18,6 +18,34 @@
     <%= f.file_field :photo%>
   </div>
 
+  <%if can? :manage, User%>
+    <div class="field">
+      <%= f.label :board_id %>
+      <%= f.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @user.board_id }, { class: 'form-control' }) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :board_kind %>
+      <%= f.select :board_kind, board_kind_options %>
+    </div> 
+
+
+    <div class="field">
+      <%= f.label :cell_id %>
+      <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' }) %><!--to-do-->
+    </div>
+
+    <div class="field">
+      <%= f.label :cell_kind %>
+      <%= f.select :cell_kind, cell_kind_options %>
+    </div>
+
+    <div class="field">
+      <%= f.label :creation_cell %>
+      <%= f.check_box :creation_cell %>
+    </div>  
+  <%end%>
+
 
   <div class="field">
     <%= f.label :email %>
