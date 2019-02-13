@@ -3,9 +3,12 @@
 $white: #FAFAFA;
 
 $light-blue: #3b809d;
+$darker-blue: #2D647C;
 
 $light-gray: #d1d1d1;
 $gray: #999;
+
+$black: #010203;
 
 /*=============================================FONTES=============================================*/
 
@@ -31,7 +34,7 @@ $font-lato: Lato, sans-serif;
         margin-bottom: 2vh;
     }
 
-    .field {
+    .home_login_field {
         color: $white;
         width: 230px;
         margin: 0 auto;
@@ -53,25 +56,27 @@ $font-lato: Lato, sans-serif;
             border: none;
         }
         
-        .field-email,
-        .field-password {
+        .home_login_field-email,
+        .home_login_field-password {
             float: left;
             font-size: 15px;
         }
     }
 
     .inline {
+        color: $white;
         display: inline-block;
         font-size: 85%;
-        margin: 0px 30px 30px -30px;
+        margin: 0px -10px 30px -30px;
 
         :visited,
         :link {
+            margin: 0px 0px 0px 80px;
             color: $white;
         }
     }
 
-    .button {
+    .home_login_button {
         padding: 8px 16px;
         font-size: 20px;
         cursor: pointer;
@@ -106,7 +111,7 @@ $font-lato: Lato, sans-serif;
 
 @media only screen and (min-width: 1380px) {
 
-    .field {
+    .home_login_field {
         width: 400px;
 
         #user_email {
@@ -119,8 +124,8 @@ $font-lato: Lato, sans-serif;
             height: 30px;
         }
     
-        .field-email,
-        .field-password {
+        .home_login_field-email,
+        .home_login_field-password {
             font-size: 25px;
         }
     }   
@@ -130,7 +135,7 @@ $font-lato: Lato, sans-serif;
         margin: 10px 30px 30px -70px;
     }
 
-    .button {
+    .home_login_button {
         padding: 12px 24px;
         font-size: 25px;
     }
