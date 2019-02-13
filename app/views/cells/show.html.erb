@@ -10,10 +10,26 @@
   <%= @cell.description %>
 </p>
 
+<p>
+  <strong>Manager</strong>
+  <%= @manager.name %>
+  <%= link_to "Profile", @manager %>
+</p>
+
+<p>
+  <strong>Members</strong>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member.name %>
+      <%= link_to "Profile", member %></li>
+    <% end %>
+  </ul>
+</p>
+
 <ul>
 <% @goals.each do |goal| %>
   <li><%= goal.name %></li>
-  <li><%= link_to "Show", goal_cell_path(goal) %></li>
+  <li><%= link_to "Show", {:controller => "goal_cells", :action => "show", :id => goal.id} %></li>
   <li><%= link_to "Edit", {:controller => "goal_cells", :action => "edit", :cell => @cell.id, :id => goal.id } %></li>
   <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %>

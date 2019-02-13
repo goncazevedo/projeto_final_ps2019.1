@@ -19,6 +19,7 @@ class TaskCellsController < ApplicationController
 
   # GET /task_cells/1/edit
   def edit
+    @goal_cell = GoalCell.find(params[:goal_cell])
   end
 
   # POST /task_cells

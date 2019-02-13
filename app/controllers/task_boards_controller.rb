@@ -19,6 +19,7 @@ class TaskBoardsController < ApplicationController
 
   # GET /task_boards/1/edit
   def edit
+    @goal_board = GoalBoard.find(params[:goal_board])
   end
 
   # POST /task_boards

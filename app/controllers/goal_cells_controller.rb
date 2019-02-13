@@ -10,6 +10,8 @@ class GoalCellsController < ApplicationController
   # GET /goal_cells/1
   # GET /goal_cells/1.json
   def show
+    @goal_cell = GoalCell.find(params[:id])
+    @tasks = TaskCell.where(goal_cell_id: @goal_cell.id)
   end
 
   # GET /goal_cells/new

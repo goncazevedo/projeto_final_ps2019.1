@@ -20,4 +20,19 @@
   <%= @goal_board.board %>
 </p>
 
+<p>
+  <strong>Tasks: </strong>
+  <% @tasks.each do |task| %>
+    <ul>
+      <li><strong>Name: </strong><%= task.name %></li>
+      <li><strong>Description: </strong><%= task.description %></li>
+      <li><strong>Finished: </strong><%= task.finished %></li>
+      <%= link_to 'Edit', {:controller => "task_boards", :action => "edit", goal_board: @goal_board.id, id: task.id} %>
+    </ul>
+  <% end %>
+</p>
+
+<p>Criar Nova Tarefa</p>
+<%= render 'task_boards/form', {task_board: TaskBoard.new} %>
+
 <%= link_to 'Back', board_path(@goal_board.board) %>

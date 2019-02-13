@@ -3,4 +3,4 @@
 <%= render 'form', task_board: @task_board %>
 
 <%= link_to 'Show', @task_board %> |
-<%= link_to 'Back', task_boards_path %>
+<%= link_to 'Back', goal_board_path(@task_board.goal_board) %>

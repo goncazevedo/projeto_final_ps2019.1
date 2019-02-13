@@ -10,6 +10,8 @@ class GoalBoardsController < ApplicationController
   # GET /goal_boards/1
   # GET /goal_boards/1.json
   def show
+    @goal_board = GoalBoard.find(params[:id])
+    @tasks = TaskBoard.where(goal_board_id: @goal_board.id)
   end
 
   # GET /goal_boards/new
