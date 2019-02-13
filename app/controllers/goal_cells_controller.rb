@@ -19,6 +19,7 @@ class GoalCellsController < ApplicationController
 
   # GET /goal_cells/1/edit
   def edit
+    @cell = Cell.find(params[:cell]) #Utilizado para editar a partir da página da célula
   end
 
   # POST /goal_cells

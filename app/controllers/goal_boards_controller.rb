@@ -19,6 +19,7 @@ class GoalBoardsController < ApplicationController
 
   # GET /goal_boards/1/edit
   def edit
+    @board = Board.find(params[:board])  #Utilizado para editar a partir da página da Diretoria
   end
 
   # POST /goal_boards

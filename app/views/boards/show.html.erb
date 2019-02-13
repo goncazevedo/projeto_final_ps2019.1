@@ -14,7 +14,7 @@
 <% @goals.each do |goal| %>
   <li><%= goal.name %></li>
   <li><%= link_to "Show", goal_board_path(goal) %></li>
-  <li><%= link_to "Edit (Não Funciona)", edit_goal_board_path(goal, board: @board) %></li>
+  <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
   <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %>
 </ul>
