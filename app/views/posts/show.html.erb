@@ -1,5 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+
+<%if can? :edit, @post%>
+  <%= render 'post_tags/form', {post_tag: @post_tag} %>
+<%end%>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% PostTag.all.each do |post_tag| %>
+      <%if post_tag.post_id == @post.id %>
+        <tr>
+          <td><%= post_tag.tag.name %></td>
+          <%if can? :edit, @post%>
+            <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%end%>
+        </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+
 <p>
   <strong>User:</strong>
   <%= @post.user.name %>
@@ -32,6 +60,8 @@
 <p><%=@post.dislikes.length%></p>
 
 <%= commontator_thread(@post) %>
+
+
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%if @post.kind == "article"%>
