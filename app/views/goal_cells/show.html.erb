@@ -17,7 +17,7 @@
 
 <p>
   <strong>Cell:</strong>
-  <%= @goal_cell.cell %>
+  <%= @goal_cell.cell.name %>
 </p>
 
 <p>
@@ -26,7 +26,18 @@
     <ul>
       <li><strong>Name: </strong><%= task.name %></li>
       <li><strong>Description: </strong><%= task.description %></li>
-      <li><strong>Finished: </strong><%= task.finished %></li>
+      <%= link_to 'Edit', {:controller => "task_cells", :action => "edit", goal_cell: @goal_cell.id, id: task.id} %>
+      <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
+    </ul>
+  <% end %>
+</p>
+
+<p>
+  <strong>Tasks Finisheds: </strong>
+  <% @tasks_finisheds.each do |task| %>
+    <ul>
+      <li><strong>Name: </strong><%= task.name %></li>
+      <li><strong>Description: </strong><%= task.description %></li>
       <%= link_to 'Edit', {:controller => "task_cells", :action => "edit", goal_cell: @goal_cell.id, id: task.id} %>
       <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
     </ul>

@@ -10,7 +10,8 @@ class CellsController < ApplicationController
   # GET /cells/1
   # GET /cells/1.json
   def show
-    @goals = GoalCell.where(cell_id: @cell.id) #Utilizado para mostrar todas as metas da célula no Show dela.
+    @goals = GoalCell.where(cell_id: @cell.id, finished: false) #Utilizado para mostrar todas as metas da célula no Show dela.
+    @goals_finisheds = GoalCell.where(cell_id: @cell.id, finished: true)
     @manager = User.find_by(cell_kind: 0, cell_id: @cell.id)
     @members = User.where(cell_kind: 1, cell_id: @cell.id)
   end

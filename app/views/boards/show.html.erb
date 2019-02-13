@@ -12,29 +12,49 @@
 
 <p>
   <strong>Director</strong>
-  <%= @director.name %>
-  <%= link_to "Profile", @director %>
+  <% if @director.present? %>
+    <%= @director.name %>
+    <%= link_to "Profile", @director %>
+  <% end %>
 </p>
 
 <p>
   <strong>Accessors</strong>
-  <ul>
-    <% @accessors.each do |accessor| %>
-      <li><%= accessor.name %>
-      <%= link_to "Profile", accessor %></li>
-    <% end %>
-  </ul>
+  <% if @accessors.present? %>
+    <ul>
+      <% @accessors.each do |accessor| %>
+        <li><%= accessor.name %>
+        <%= link_to "Profile", accessor %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </p>
 
+<p>Metas em Andamento</p>
 <ul>
-<% @goals.each do |goal| %>
-  <li><%= goal.name %></li>
-  <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
-  <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
-  <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-<% end %>
+  <% @goals.each do |goal| %>
+    <li><strong>Name: </strong><%= goal.name %></li>
+    <li><strong>Deadline: </strong><%= goal.deadline %></li>
+    <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
+    <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
+    <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
 </ul>
 
+<p>
+  <strong>Metas Finalizadas</strong>
+  <% @goals_finisheds.each do |goal| %>
+    <ul>
+      <li><strong>Name: </strong><%= goal.name %></li>
+      <li><strong>Deadline: </strong><%= goal.deadline %></li>
+      <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
+      <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
+      <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+  <% end %>
+</p>
+
+<%= "Adicionar Meta" %>
 <%= render 'goal_boards/form', {board: @board, goal_board: GoalBoard.new} %>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
