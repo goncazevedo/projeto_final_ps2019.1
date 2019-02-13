@@ -1,18 +1,19 @@
 <section id="home_login">
+
   <%= image_tag("logo-in.png", alt: "logo-in", class: "logo-in") %>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.label :email, class:"field1" %><br />
+      <%= f.label :email, class:"field-email" %><br />
       <%= f.email_field :email, autocomplete: "email" %>
     </div>
     <div class="field">
-        <%= f.label :password, class:"field2" %><br />
+        <%= f.label :password, class:"field-password" %><br />
         <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
 
     <div class="inline">
       <% if devise_mapping.rememberable? %>
-        <div class="field" id="field3">
+        <div class="field" id="field-remember">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>
