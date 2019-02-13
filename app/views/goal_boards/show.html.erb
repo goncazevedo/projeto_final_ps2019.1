@@ -28,6 +28,7 @@
       <li><strong>Description: </strong><%= task.description %></li>
       <li><strong>Finished: </strong><%= task.finished %></li>
       <%= link_to 'Edit', {:controller => "task_boards", :action => "edit", goal_board: @goal_board.id, id: task.id} %>
+      <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
     </ul>
   <% end %>
 </p>
