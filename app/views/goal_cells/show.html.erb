@@ -20,4 +20,19 @@
   <%= @goal_cell.cell %>
 </p>
 
+<p>
+  <strong>Tasks: </strong>
+  <% @tasks.each do |task| %>
+    <ul>
+      <li><strong>Name: </strong><%= task.name %></li>
+      <li><strong>Description: </strong><%= task.description %></li>
+      <li><strong>Finished: </strong><%= task.finished %></li>
+      <%= link_to 'Edit', {:controller => "task_cells", :action => "edit", goal_cell: @goal_cell.id, id: task.id} %>
+    </ul>
+  <% end %>
+</p>
+
+<p>Criar Nova Tarefa</p>
+<%= render 'task_cells/form', {task_cell: TaskCell.new} %>
+
 <%= link_to 'Back', cell_path(@goal_cell.cell) %>

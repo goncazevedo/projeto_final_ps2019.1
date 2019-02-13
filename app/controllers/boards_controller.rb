@@ -11,6 +11,7 @@ class BoardsController < ApplicationController
   # GET /boards/1.json
   def show
     @goals = GoalBoard.where(board_id: @board.id) #Utilizado para mostrar todas as metas da diretoria no Show dela.
+    
   end
 
   # GET /boards/new

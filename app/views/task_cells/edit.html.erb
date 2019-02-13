@@ -3,4 +3,4 @@
 <%= render 'form', task_cell: @task_cell %>
 
 <%= link_to 'Show', @task_cell %> |
-<%= link_to 'Back', task_cells_path %>
+<%= link_to 'Back', goal_cell_path(@task_cell.goal_cell) %>

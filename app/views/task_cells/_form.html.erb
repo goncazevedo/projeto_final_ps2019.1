@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :goal_cell_id %>
-    <%= form.text_field :goal_cell_id %>
+    <%= form.hidden_field :goal_cell_id, value: @goal_cell.id %>
   </div>
 
   <div class="actions">
