@@ -11,7 +11,8 @@ class GoalBoardsController < ApplicationController
   # GET /goal_boards/1.json
   def show
     @goal_board = GoalBoard.find(params[:id])
-    @tasks = TaskBoard.where(goal_board_id: @goal_board.id)
+    @tasks = TaskBoard.where(goal_board_id: @goal_board.id, finished: false)
+    @tasks_finisheds = TaskBoard.where(goal_board_id: @goal_board.id, finished: true)
   end
 
   # GET /goal_boards/new
