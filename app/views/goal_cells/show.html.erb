@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @goal_cell.name %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @goal_cell.deadline %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @goal_cell.finished %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @goal_cell.cell %>
+</p>
+
+<%= link_to 'Back', cell_path(@goal_cell.cell) %>

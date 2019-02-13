@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @goal_board.name %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @goal_board.deadline %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @goal_board.finished %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @goal_board.board %>
+</p>
+
+<%= link_to 'Back', board_path(@goal_board.board) %>

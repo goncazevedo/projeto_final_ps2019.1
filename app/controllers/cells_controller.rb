@@ -10,6 +10,7 @@ class CellsController < ApplicationController
   # GET /cells/1
   # GET /cells/1.json
   def show
+    @goals = GoalCell.where(cell_id: @cell.id) #Utilizado para mostrar todas as metas da célula no Show dela.
   end
 
   # GET /cells/new

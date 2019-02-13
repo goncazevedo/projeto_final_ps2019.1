@@ -1,5 +1,5 @@
 class Board < ApplicationRecord
-    has_many :goals
+    has_many :goal_boards, dependent: :destroy
     has_many :users
 
     #Relação N pra N

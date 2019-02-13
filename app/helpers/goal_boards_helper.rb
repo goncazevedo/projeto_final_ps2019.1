@@ -1,0 +1,2 @@
+module GoalBoardsHelper
+end

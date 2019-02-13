@@ -1,0 +1,36 @@
+<%= form_with(model: goal_cell, local: true) do |form| %>
+  <% if goal_cell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(goal_cell.errors.count, "error") %> prohibited this goal_cell from being saved:</h2>
+
+      <ul>
+      <% goal_cell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.date_select :deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finished %>
+    <%= form.check_box :finished %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :cell_id, value: @cell.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

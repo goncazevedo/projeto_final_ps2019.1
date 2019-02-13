@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Task Cells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Finished</th>
+      <th>Goal cell</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @task_cells.each do |task_cell| %>
+      <tr>
+        <td><%= task_cell.name %></td>
+        <td><%= task_cell.description %></td>
+        <td><%= task_cell.finished %></td>
+        <td><%= task_cell.goal_cell %></td>
+        <td><%= link_to 'Show', task_cell %></td>
+        <td><%= link_to 'Edit', edit_task_cell_path(task_cell) %></td>
+        <td><%= link_to 'Destroy', task_cell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task Cell', new_task_cell_path %>

@@ -10,5 +10,16 @@
   <%= @cell.description %>
 </p>
 
+<ul>
+<% @goals.each do |goal| %>
+  <li><%= goal.name %></li>
+  <li><%= link_to "Show", goal_cell_path(goal) %></li>
+  <li><%= link_to "Edit", {:controller => "goal_cells", :action => "edit", :cell => @cell.id, :id => goal.id } %></li>
+  <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+<% end %>
+</ul>
+
+<%= render 'goal_cells/form', {cell: @cell, goal_cell: GoalCell.new} %>
+
 <%= link_to 'Edit', edit_cell_path(@cell) %> |
 <%= link_to 'Back', cells_path %>

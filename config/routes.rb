@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :task_cells
+  resources :task_boards
+  resources :goal_cells
+  resources :goal_boards
   devise_for :users
   root to:  "users#index"
   resources :posts do
@@ -10,8 +14,6 @@ Rails.application.routes.draw do
   resources :fusions
   resources :project_users
   resources :users
-  resources :tasks
-  resources :goals
   resources :boards
   resources :cells
   resources :projects

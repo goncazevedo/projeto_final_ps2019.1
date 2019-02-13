@@ -1,4 +1,4 @@
 class Cell < ApplicationRecord
-    has_many :goals
+    has_many :goal_cells, dependent: :destroy
     has_many :users
 end
