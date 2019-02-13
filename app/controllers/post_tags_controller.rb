@@ -28,10 +28,10 @@ class PostTagsController < ApplicationController
 
     respond_to do |format|
       if @post_tag.save
-        format.html { redirect_to @post_tag, notice: 'Post tag was successfully created.' }
-        format.json { render :show, status: :created, location: @post_tag }
+        format.html { redirect_to request.referrer, notice: 'Post tag was successfully created.' }
+        format.json { redirect_to request.referrer, status: :created, location: @post_tag }
       else
-        format.html { render :new }
+        format.html { redirect_to request.referrer }
         format.json { render json: @post_tag.errors, status: :unprocessable_entity }
       end
     end
@@ -42,10 +42,10 @@ class PostTagsController < ApplicationController
   def update
     respond_to do |format|
       if @post_tag.update(post_tag_params)
-        format.html { redirect_to @post_tag, notice: 'Post tag was successfully updated.' }
+        format.html { redirect_to request.referrer, notice: 'Post tag was successfully updated.' }
         format.json { render :show, status: :ok, location: @post_tag }
       else
-        format.html { render :edit }
+        format.html { redirect_to request.referrer }
         format.json { render json: @post_tag.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class PostTagsController < ApplicationController
   def destroy
     @post_tag.destroy
     respond_to do |format|
-      format.html { redirect_to post_tags_url, notice: 'Post tag was successfully destroyed.' }
+      format.html { redirect_to request.referrer, notice: 'Post tag was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
