@@ -1,32 +1,42 @@
 <p id="notice"><%= notice %></p>
 
+<%if @post.kind == "question" %>
+  <%if can? :edit, @post%>
+    <%= render 'post_tags/form', {post_tag: @post_tag} %>
+  <%end%>
 
-<%if can? :edit, @post%>
-  <%= render 'post_tags/form', {post_tag: @post_tag} %>
+  <table>
+    <thead>
+      <tr>
+        <th>Tags</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% PostTag.all.each do |post_tag| %>
+        <%if post_tag.post_id == @post.id %>
+          <tr>
+            <td><%= post_tag.tag.name %></td>
+            <%if can? :edit, @post%>
+              <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <%end%>
+          </tr>
+        <%end%>
+      <% end %>
+    </tbody>
+  </table>
 <%end%>
+<% if @post.user.photo.present? %>
+  <strong>Photo:</strong>
+  <%= image_tag (@post.user.photo.url) %>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tags</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% PostTag.all.each do |post_tag| %>
-      <%if post_tag.post_id == @post.id %>
-        <tr>
-          <td><%= post_tag.tag.name %></td>
-          <%if can? :edit, @post%>
-            <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <%end%>
-        </tr>
-      <%end%>
-    <% end %>
-  </tbody>
-</table>
-
+<p>
+  <strong>Cargo:</strong>
+  <%= "#{@post.user.board_kind} de #{@post.user.board.name}" %>
+</p>
 
 <p>
   <strong>User:</strong>
@@ -49,8 +59,8 @@
 <% end %>
 
 <p>
-  <strong>Kind:</strong>
-  <%= @post.kind %>
+  <strong>Date:</strong>
+  <%= @post.created_at.to_date %>
 </p>
 
 <%= button_to 'Like', post_likes_path(@post), method: :post %>

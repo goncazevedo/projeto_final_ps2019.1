@@ -20,16 +20,22 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.board %></td>
-        <td><%= user.cell %></td>
+        <td><%= user.board.name %></td>
+        <td><%= user.cell.name %></td>
         <td><%= user.name %></td>
         <td><%= user.age %></td>
         <td><%= user.cell_kind %></td>
         <td><%= user.board_kind %></td>
-        <td><%= user.photo %></td>
+        <td>
+          <% if user.photo.present? %>
+            <%= image_tag (user.photo.url) %>
+          <% end %>
+        </td>
         <td><%= user.creation_cell %></td>
         <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <%if can? :edit, user%>
+          <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
+        <%end%>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

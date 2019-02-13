@@ -14,6 +14,7 @@ class Ability
       can [:manage], Dislike #Dar Deslike
       can [:create], Post #Publicar artigos e perguntas
       can [:edit], Post, user_id: user.id 
+      can [:edit], User, id: user.id
       #can [:create], Comment #Responder Perguntas
       #can [:search], Post #Pesquisar Artigo
       #can [:read], Task (Que ele está incluso) #Dar check nas tarefas do sistema de tarefas
@@ -27,6 +28,7 @@ class Ability
 
       can [:manage], [Cell, Post, Board]
       can [:manage], [GoalBoard], board_id: user.board_id
+      can [:edit], User, id: user.id
       #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
 
       #Diretor de Gestão Pessoas
