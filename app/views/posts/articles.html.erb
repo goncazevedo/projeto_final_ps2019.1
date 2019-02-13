@@ -7,8 +7,6 @@
     <tr>
       <th>User</th>
       <th>Title</th>
-      <th>Content</th>
-      <th>Photo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +16,6 @@
         <tr>
             <td><%= article.user.name %></td>
             <td><%= article.title %></td>
-            <td><%= article.content %></td>
-            <td><%= article.photo %></td>
             <td><%= link_to 'Show', article %></td>
             <%if can? :edit, article%>
                 <td><%= link_to 'Edit', edit_post_path(article) %></td>

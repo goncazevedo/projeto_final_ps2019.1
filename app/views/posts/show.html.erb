@@ -27,6 +27,17 @@
   </tbody>
 </table>
 
+<% if @post.user.photo.present? %>
+  <strong>Photo:</strong>
+  <%= image_tag (@post.user.photo.url) %>
+<% end %>
+
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user.name %>
+</p>
+
 
 <p>
   <strong>User:</strong>
