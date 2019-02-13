@@ -1,13 +1,15 @@
 <section id="home_login">
 
   <%= image_tag("logo-in.png", alt: "logo-in", class: "logo-in") %>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email, class:"field-email" %><br />
+    <div class="home_login_field">
+      <%= f.label :email, class:"home_login_field-email" %><br />
       <%= f.email_field :email, autocomplete: "email" %>
     </div>
-    <div class="field">
-        <%= f.label :password, class:"field-password" %><br />
+
+    <div class="home_login_field">
+        <%= f.label :password, class:"home_login_field-password" %><br />
         <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
 
@@ -23,8 +25,8 @@
       <%= render "devise/shared/links" %> 
     
       
-    <div class="actions">
-      <%= f.submit "ENTRAR", class:"button" %>
+    <div class="home_login_actions">
+      <%= f.submit "ENTRAR", class:"home_login_button" %>
     </div>
   <% end %>
 
