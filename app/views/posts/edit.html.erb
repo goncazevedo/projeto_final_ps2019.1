@@ -1,6 +1,7 @@
-<h1>Editing Post</h1>
+<h1>Editing</h1> <%=@post.kind%>
 
-<%= render 'form', post: @post %>
+
+<%= render 'form', {post: @post, kind: @post.kind} %>
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>

@@ -7,6 +7,14 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def articles
+    @articles = Post.where(kind: "article")
+  end
+
+  def forum
+    @forum = Post.where(kind: "question")
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -16,6 +24,15 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+
+  def new_article
+    @article = Post.new
+  end
+
+  def new_question
+    @question = Post.new
+  end
+
 
   # GET /posts/1/edit
   def edit
