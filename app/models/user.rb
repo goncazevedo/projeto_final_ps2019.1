@@ -9,6 +9,8 @@ class User < ApplicationRecord
   belongs_to :board
   belongs_to :cell
 
+  acts_as_commontator
+
   has_many :likes, dependent: :destroy
   has_many :dislikes, dependent: :destroy
   

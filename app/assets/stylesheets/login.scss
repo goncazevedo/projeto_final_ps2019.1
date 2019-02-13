@@ -1,0 +1,78 @@
+#home_login {
+    background-image: url('background-in.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    display: block;
+    font-family: 'Lato', sans-serif;
+
+    .logo-in {
+        width: 280px;
+        height: 195px;
+        margin: 90px 0px 30px 0px;
+    }
+}
+
+.field {
+    color: #fafafa;
+    width: 230px;
+    margin: 0 auto;
+
+    #user_email {
+        margin: 0px 0px 15px 0px;
+        width: 230px;
+        height: 20px;
+        outline: none;
+        border-radius: 50px;
+        border: none;
+    }
+
+    #user_password {
+        width: 230px;
+        height: 20px;
+        outline: none;
+        border-radius: 50px;
+        border: none;
+    }
+    
+    .field1,
+    .field2 {
+        float: left;
+        font-size: 15px;
+    }
+}
+
+.inline {
+    display: inline-block;
+    font-size: 85%;
+    margin: 0px 30px 30px -30px;
+
+    :visited,
+    :link {
+        color: #fafafa;
+    }
+}
+
+
+.button {
+    padding: 8px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #3b809d;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 0px #D1D1D1;
+    font-weight: bold;
+}
+  
+.button:hover {
+    background-color: #fafafa;
+    box-shadow: 0 1px #999;
+    transition: 0.3s;
+    transform: translateY(4px);
+}

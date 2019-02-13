@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :dislikes
     resources :likes
   end
+  mount Commontator::Engine => '/commontator'
   resources :post_tags
   resources :fusions
   resources :project_users
