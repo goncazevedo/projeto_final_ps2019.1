@@ -19,6 +19,7 @@ $white: #FAFAFA;
 $light-blue: #3b809d;
 $darker-blue: #2D647C;
 $light-gray: #d1d1d1;
+$lighter-gray: #eeeded;
 $gray: #999;
 $black: #010203;
 
@@ -33,7 +34,7 @@ $black: #010203;
     margin: 0 auto;
 }
 
-.article_title {
+.article {
     margin: 5vh auto;
 
     h1 {
@@ -44,12 +45,34 @@ $black: #010203;
         text-transform: uppercase;
     }
 
-    .article_titleLine {
+    .line {
         width: 175px;
         height: 5px;
         background-color: $light-blue;
         margin: 5px auto;
     }
     
+    tr {
+        background-color: $lighter-gray;
+        padding: 10px;
+        margin: 5px auto;
+        border-radius: 15px;
+
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        color: $black;
+
+    }
+
+    .article_title {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:link, &:visited {
+            text-decoration: none;
+            color: $black;
+        }
+    }
 }
 
