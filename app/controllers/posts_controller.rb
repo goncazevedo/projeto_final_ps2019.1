@@ -8,20 +8,28 @@ class PostsController < ApplicationController
   end
 
   def articles
-    if params[:tag]
-      @posts = Post.where(kind: "article")
+    @posts = Post.where(kind: "article")
+    if (params[:tag] && params[:tag] != "")  && params[:title] != ""
+      @articles = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids, title: params[:title])
+    elsif params[:title] && params[:title] != "" 
+      @articles = @posts.where(title: params[:title])
+    elsif params[:tag] && params[:tag] != "" 
       @articles = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids)
     else
-      @articles = Post.where(kind: "article")
+      @articles = @posts
     end
   end
 
   def forum
-    if params[:tag] && params[:tag].strip != "" 
-      @posts = Post.where(kind: "question")
+    @posts = Post.where(kind: "question")
+    if (params[:tag] && params[:tag] != "")  && params[:title] != ""
+      @forum = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids, title: params[:title])
+    elsif params[:title] && params[:title] != ""
+      @forum = @posts.where(title: params[:title])
+    elsif params[:tag] && params[:tag] != "" 
       @forum = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids)
     else
-      @forum = Post.where(kind: "question")
+      @forum = @posts
     end
   end
   # GET /posts/1
