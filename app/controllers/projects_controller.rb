@@ -14,7 +14,8 @@ class ProjectsController < ApplicationController
     @project_user = ProjectUser.new
     @project_tag = ProjectTag.new
     @members = @project.users
-    @tags = @project.tags
+    @tags_of_projects = @project.tags
+    @tags = Tag.where(project: true)
   end
 
   # GET /projects/new
