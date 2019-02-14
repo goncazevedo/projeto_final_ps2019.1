@@ -17,7 +17,7 @@
 
   <div class="field">
     <%= form.label :tag_id %>
-    <%= form.collection_select(:tag_id, @tags, :id, :name, { :prompt => 'Escolha uma Tag', :selected => @post_tag.tag_id }, { class: 'form-control' })%>
+    <%= form.collection_select(:tag_id, Tag.all, :id, :name, { :prompt => 'Escolha uma Tag', :selected => @post_tag.tag_id }, { class: 'form-control' })%>
   </div>
 
   <div class="actions">

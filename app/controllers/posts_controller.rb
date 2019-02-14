@@ -12,9 +12,12 @@ class PostsController < ApplicationController
   end
 
   def forum
-    @forum = Post.where(kind: "question")
+    if params[:title]
+      @forum = Post.where(title: params[:title])
+    else
+      @forum = Post.where(kind: "question")
+    end
   end
-
   # GET /posts/1
   # GET /posts/1.json
   def show
