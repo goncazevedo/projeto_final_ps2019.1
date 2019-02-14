@@ -30,5 +30,19 @@
   </ul>
 </p>
 
+<p>
+  <strong>Adicionar Tag<strong>
+  <%= render 'project_tags/form', {project_tag: @project_tag} %>
+</p>
+
+<p>
+  <strong>Tags</strong>
+  <ul>
+    <% @tags.each do |tag| %>
+      <li><%= tag.name %>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

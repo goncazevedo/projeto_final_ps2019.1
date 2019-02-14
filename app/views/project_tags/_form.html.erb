@@ -1,0 +1,26 @@
+<%= form_with(model: project_tag, local: true) do |form| %>
+  <% if project_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project_tag.errors.count, "error") %> prohibited this project_tag from being saved:</h2>
+
+      <ul>
+      <% project_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.hidden_field :project_id, value: @project.id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.collection_select(:tag_id, Tag.all, :id, :name, { :prompt => 'Escolha uma Tag', :selected => @project_tag.tag_id } )%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

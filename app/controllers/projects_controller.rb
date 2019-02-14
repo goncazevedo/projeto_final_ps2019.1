@@ -12,7 +12,9 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project_user = ProjectUser.new
+    @project_tag = ProjectTag.new
     @members = @project.users
+    @tags = @project.tags
   end
 
   # GET /projects/new

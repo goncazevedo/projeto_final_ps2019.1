@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :project_tags
   resources :task_cells
   resources :task_boards
   resources :goal_cells
