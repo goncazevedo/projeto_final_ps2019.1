@@ -9,10 +9,19 @@ o888o o888o `Y888""8o     `8'      `Y8bod8P' `Y888""8o d888b
 
 */
 
+//  C O R E S
+$white: #FAFAFA;
+$light-blue: #3b809d;
+$darker-blue: #2D647C;
+$light-gray: #d1d1d1;
+$gray: #999;
+$black: #010203;
+
+// C O N T E N T
 .navbar {
     width: 100vw;
     height: 80px;
-    background-color: #3B809D;
+    background-color: $light-blue;
 }
 
 .nav_content {
@@ -36,14 +45,12 @@ o888o o888o `Y888""8o     `8'      `Y8bod8P' `Y888""8o d888b
     padding: 10px;
     margin: 5px;
 
-    background-color: #fafafa;
+    background-color: $white;
     border-radius: 5px;
-    box-shadow: 0px 4px #d1d1d1;
+    box-shadow: 0px 4px $light-gray;
 }
 
 .nav_icon :hover {
-    box-shadow: 0px 4px #fafafa;
+    box-shadow: 0px 4px $white;
     transition: 1s;
 }
-
- /* #3B809D */
