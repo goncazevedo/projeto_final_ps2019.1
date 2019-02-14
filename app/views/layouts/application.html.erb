@@ -19,12 +19,45 @@
           <%= image_tag("logo-in.png", :alt => "IN Junior", :class => "nav_logo")%>
           
           <div class="nav_buttons">
-            <%= link_to  image_tag("house-outline.svg", :alt => "Página Inicial", :class => "nav_icon"), root_path %>
-            <%= link_to  image_tag("avatar.svg", :alt => "Perfil", :class => "nav_icon"), current_user %>
-            <%= link_to  image_tag("conversation.svg", :alt => "Fórum", :class => "nav_icon"), forum_path %>
-            <%= link_to  image_tag("file.svg", :alt => "Artigos", :class => "nav_icon"), articles_path %>
-             <%= link_to image_tag("logout.svg", :alt => "Sair", :class => "nav_icon"), destroy_user_session_path, method: :delete %>
+            <div class="dropdown">
+              <span><%= link_to  image_tag("house-outline.svg", :alt => "Página Inicial", :class => "nav_icon"), root_path %></span>
+              <div class="dropdown_content">
+                <p>Página Inicial</p>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <span><%= link_to  image_tag("avatar.svg", :alt => "Perfil", :class => "nav_icon"), current_user %></span>
+              <div class="dropdown_content">
+                <p>Perfil</p>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <span><%= link_to  image_tag("conversation.svg", :alt => "Fórum", :class => "nav_icon"), forum_path %></span>
+              <div class="dropdown_content">
+                <p>Fórum</p>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <span><%= link_to  image_tag("file.svg", :alt => "Artigos", :class => "nav_icon"), articles_path %></span>
+              <div class="dropdown_content">
+                <p>Artigos</p>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <span><%= link_to image_tag("logout.svg", :alt => "Sair", :class => "nav_icon"), destroy_user_session_path, method: :delete %></span>
+              <div class="dropdown_content">
+                <p>Sair</p>
+              </div>
+            </div>
+
+
+
         <%end%>
+
           </div>
                 
         </div>
