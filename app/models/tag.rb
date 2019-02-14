@@ -6,4 +6,6 @@ class Tag < ApplicationRecord
     #Relação N pra N
     has_many :project_tags
     has_many :projects, through: :project_tags
+
+    validates :name, project, post, presence: true
 end
