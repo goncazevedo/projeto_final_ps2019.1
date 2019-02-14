@@ -1,6 +1,6 @@
 module PostsHelper
     def tags_select
-        ["Rails", "teste1"]
+        Tag.pluck(:name)
     end
 
 end
