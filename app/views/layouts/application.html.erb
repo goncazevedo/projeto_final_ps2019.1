@@ -19,11 +19,11 @@
           <%= image_tag("logo-in.png", :alt => "IN Junior", :class => "nav_logo")%>
           
           <div class="nav_buttons">
-            <%= link_to  "home", root_path %>
-            <%= link_to  "profile", current_user %>
-            <%= link_to  "forum", forum_path %>
-            <%= link_to  "articles", articles_path %>
-             <%= link_to  "Sair", destroy_user_session_path, method: :delete %>
+            <%= link_to  image_tag("house-outline.svg", :alt => "Página Inicial", :class => "nav_icon"), root_path %>
+            <%= link_to  image_tag("avatar.svg", :alt => "Perfil", :class => "nav_icon"), current_user %>
+            <%= link_to  image_tag("conversation.svg", :alt => "Fórum", :class => "nav_icon"), forum_path %>
+            <%= link_to  image_tag("file.svg", :alt => "Artigos", :class => "nav_icon"), articles_path %>
+             <%= link_to image_tag("logout.svg", :alt => "Sair", :class => "nav_icon"), destroy_user_session_path, method: :delete %>
         <%end%>
           </div>
                 

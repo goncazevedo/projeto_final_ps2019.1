@@ -29,5 +29,16 @@ o888o o888o `Y888""8o     `8'      `Y8bod8P' `Y888""8o d888b
     height: 55px;
 }
 
+.nav_icon {
+    height: 30px;
+    width: auto;
+    
+    padding: 10px;
+    margin: 5px;
+
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0px 4px #d1d1d1;
+}
 
  /* #3B809D */
