@@ -39,6 +39,43 @@
   <strong>Creation cell:</strong>
   <%= @user.creation_cell %>
 </p>
+
+<p>
+  <strong>Projects</strong>
+  <ul>
+    <% @projects.each do |project| %>
+      <li><%= link_to project.title, project %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Projects Finisheds</strong>
+  <ul>
+    <% @projects_finisheds.each do |project| %>
+      <li><%= link_to project.title, project %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Articles</strong>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><%= link_to article.title, article %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Questions on Forum</strong>
+  <ul>
+    <% @questions.each do |question| %>
+      <li><%= link_to question.title, question %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%if can? :edit, @user%>
   <%= link_to 'Edit', edit_user_path(@user) %> |
 <%end%>
