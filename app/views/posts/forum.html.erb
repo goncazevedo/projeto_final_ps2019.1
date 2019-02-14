@@ -3,7 +3,7 @@
 <h1>Forum</h1>
 
 <%= form_tag(forum_path, method: :get) do %>
-  <%= text_field_tag :title, params[:title] %>
+  <%= text_field_tag :tag, params[:tag] %>
   <%= submit_tag 'Search' , name: nil%>
 <% end %>
 

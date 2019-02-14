@@ -12,8 +12,8 @@ class PostsController < ApplicationController
   end
 
   def forum
-    if params[:title]
-      @forum = Post.where(title: params[:title])
+    if params[:tag] && params[:tag].strip != "" 
+      @forum = Post.where(id: Tag.find_by(name: params[:tag]).post_ids)
     else
       @forum = Post.where(kind: "question")
     end
