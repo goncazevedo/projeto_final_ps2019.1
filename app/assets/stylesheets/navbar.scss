@@ -65,9 +65,9 @@ $font-lato: Lato, sans-serif;
 .dropdown {
     position: relative;
     display: inline-block;
-  }
+}
   
-  .dropdown_content {
+.dropdown_content {
     display: none;
     position: absolute;
     background-color: $light-blue;
@@ -80,8 +80,8 @@ $font-lato: Lato, sans-serif;
     color: $white;
 
     z-index: 1;
-  }
+}
   
-  .dropdown:hover .dropdown_content {
+.dropdown:hover .dropdown_content {
     display: block;
-  }
+}
