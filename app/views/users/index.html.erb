@@ -33,7 +33,7 @@
         </td>
         <td><%= user.creation_cell %></td>
         <td><%= link_to 'Show', user %></td>
-        <%if can? :edit, user%>
+        <%if can? :edit, User%>
           <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
         <%end%>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -44,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_registration_path %>
+<%= link_to 'New User', new_user_path %>

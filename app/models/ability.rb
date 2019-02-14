@@ -33,8 +33,7 @@ class Ability
 
       #Diretor de Gestão Pessoas
       if user.board_id == Board.find_by(name: "Gestão de Pessoas").id
-        can [:create], User
-        can [:manage], User, [board_kind: 1, board_id: Board.find_by(name: "Gestão de Pessoas").id]
+        can [:manage], User
         can [:manage], Fusion
       end
 
