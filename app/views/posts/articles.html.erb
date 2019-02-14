@@ -22,10 +22,10 @@
               </div>
 
               <%if can? :edit, article%>
-                  <%= link_to 'Editar', edit_post_path(article) %>
+                  <%= link_to 'Editar', edit_post_path(article), :class => "button alteration" %>
               <%end%>
               <%if can? :destroy, article%>
-                  <%= link_to 'Apagar', article, method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
+                  <%= link_to 'Apagar', article, :class => "button alteration", method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
               <%end%>
               </div>
             
@@ -35,6 +35,6 @@
       <br>
 
 
-    <%= link_to 'Nova postagem', new_article_path, :class => "button_new" %>
+    <%= link_to 'Nova postagem', new_article_path, :class => "button" %>
     </section>
 </div>
