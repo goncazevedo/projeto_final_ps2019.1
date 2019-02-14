@@ -1,0 +1,33 @@
+/*
+                                   .o8                         
+                                  "888                         
+ooo. .oo.    .oooo.   oooo    ooo  888oooo.   .oooo.   oooo d8b
+`888P"Y88b  `P  )88b   `88.  .8'   d88' `88b `P  )88b  `888""8P
+ 888   888   .oP"888    `88..8'    888   888  .oP"888   888    
+ 888   888  d8(  888     `888'     888   888 d8(  888   888    
+o888o o888o `Y888""8o     `8'      `Y8bod8P' `Y888""8o d888b   
+
+*/
+
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: #3B809D;
+}
+
+.nav_content {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.nav_buttons {
+    float: right;
+}
+
+.nav_logo {
+    width: 85px;
+    height: 55px;
+}
+
+
+ /* #3B809D */

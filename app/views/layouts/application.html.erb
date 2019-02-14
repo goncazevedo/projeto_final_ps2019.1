@@ -14,13 +14,21 @@
 
   <body>
     <%if user_signed_in?%>
-      <%= link_to  "home", root_path %>
-      <%= link_to  "profile", current_user %>
-      <%= link_to  "forum", forum_path %>
-      <%= link_to  "articles", articles_path %>
-
-      <%= link_to  "Sair", destroy_user_session_path, method: :delete %>
-    <%end%>
+      <div class="navbar">
+        <div class="nav_content">
+          <%= image_tag("logo-in.png", :alt => "IN Junior", :class => "nav_logo")%>
+          
+          <div class="nav_buttons">
+            <%= link_to  "home", root_path %>
+            <%= link_to  "profile", current_user %>
+            <%= link_to  "forum", forum_path %>
+            <%= link_to  "articles", articles_path %>
+             <%= link_to  "Sair", destroy_user_session_path, method: :delete %>
+        <%end%>
+          </div>
+                
+        </div>
+      </div>
 
     <%= yield %>
   </body>
