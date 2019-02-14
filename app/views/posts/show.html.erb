@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <%if @post.kind == "question" %>
   <%if can? :edit, @post%>
     <%= render 'post_tags/form', {post_tag: @post_tag} %>
@@ -45,12 +44,13 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @post.title %>
+  <%= @post.title%>
 </p>
+<%= tinymce %>
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <%= simple_format(@post.content) %>
 </p>
 
 <% if @post.photo.present? %>
