@@ -5,4 +5,6 @@ class Board < ApplicationRecord
     #Relação N pra N
     has_many :fusions
     has_many :users, through: :fusions
+
+    validates :name, :description, presence: true
 end
