@@ -19,10 +19,10 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
+  <%= tinymce %>
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
 
   <div class="field">
