@@ -15,5 +15,34 @@
   <%= @project.finished %>
 </p>
 
+<p>
+  <strong>Adicionar Membro</strong>
+  <%= render 'project_users/form', {project_user: @project_user} %>
+</p>
+
+<p>
+  <strong>Membros</strong>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member.name %>
+      <%= link_to "Profile", member %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Adicionar Tag<strong>
+  <%= render 'project_tags/form', {project_tag: @project_tag} %>
+</p>
+
+<p>
+  <strong>Tags</strong>
+  <ul>
+    <% @tags_of_projects.each do |tag| %>
+      <li><%= tag.name %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

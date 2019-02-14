@@ -4,12 +4,18 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where(finished: false)
+    @projects_finisheds = Project.where(finished: true)
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project_user = ProjectUser.new
+    @project_tag = ProjectTag.new
+    @members = @project.users
+    @tags_of_projects = @project.tags
+    @tags = Tag.where(project: true)
   end
 
   # GET /projects/new

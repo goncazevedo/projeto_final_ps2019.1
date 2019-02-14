@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post_tag = PostTag.new
+    @tags = Tag.where(post: true)
   end
 
   # GET /posts/new

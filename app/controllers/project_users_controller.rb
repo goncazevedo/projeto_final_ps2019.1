@@ -28,10 +28,10 @@ class ProjectUsersController < ApplicationController
 
     respond_to do |format|
       if @project_user.save
-        format.html { redirect_to @project_user, notice: 'Project user was successfully created.' }
+        format.html { redirect_to project_path(@project_user.project_id), notice: 'Project user was successfully created.' }
         format.json { render :show, status: :created, location: @project_user }
       else
-        format.html { render :new }
+        format.html { redirect_to project_path(@project_user.project_id), notice: 'Project user can not be created' }
         format.json { render json: @project_user.errors, status: :unprocessable_entity }
       end
     end

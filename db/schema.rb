@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_233840) do
+ActiveRecord::Schema.define(version: 2019_02_14_161405) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -132,6 +132,15 @@ ActiveRecord::Schema.define(version: 2019_02_12_233840) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "project_tags", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_tags_on_project_id"
+    t.index ["tag_id"], name: "index_project_tags_on_tag_id"
+  end
+
   create_table "project_users", force: :cascade do |t|
     t.integer "project_id"
     t.integer "user_id"
@@ -153,6 +162,8 @@ ActiveRecord::Schema.define(version: 2019_02_12_233840) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "project"
+    t.boolean "post"
   end
 
   create_table "task_boards", force: :cascade do |t|
