@@ -2,6 +2,12 @@
 
 <h1>Forum</h1>
 
+<%= form_tag(forum_path, method: :get) do %>
+  Filtro:<%= select_tag :tag, options_for_select(tags_select),{:prompt => "escolha uma tag"} %>
+  Titulo:<%= text_field_tag :title,params[:title] %>
+  <%= submit_tag 'Search' , name: nil%>
+<% end %>
+
 <table>
   <thead>
     <tr>
