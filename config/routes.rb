@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :task_boards
   resources :goal_cells
   resources :goal_boards
+  get "/users/new", to: "users#new"
+  post "/users", to: "users#create"
   devise_for :users
   root to:  "users#index"
   
