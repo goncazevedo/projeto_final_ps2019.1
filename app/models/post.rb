@@ -17,5 +17,6 @@ class Post < ApplicationRecord
     question: 1
   }
 
-
+  validates :user_id, :title, :content, :kind, presence: true
+  
 end
