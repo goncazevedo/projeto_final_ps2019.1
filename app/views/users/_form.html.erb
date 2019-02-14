@@ -1,4 +1,4 @@
-<%= form_with(model: user, local: true) do |form| %>
+<%= form_with(model: user, local: true) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,46 +12,67 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :board_id %>
-    <%= form.text_field :board_id %>
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true%>
   </div>
 
   <div class="field">
-    <%= form.label :cell_id %>
-    <%= form.text_field :cell_id %>
+    <%= f.label :age %>
+    <%= f.number_field :age, autofocus: true%>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= form.label :cell_kind %>
-    <%= form.number_field :cell_kind %>
+    <%= f.label :photo %>
+    <%= f.file_field :photo%>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :board_id %>
+    <%= f.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @user.board_id }, { class: 'form-control' }) %>
   </div>
 
   <div class="field">
-    <%= form.label :board_kind %>
-    <%= form.number_field :board_kind %>
+    <%= f.label :board_kind %>
+    <%= f.select :board_kind, board_kind_options %>
+  </div> 
+
+
+  <div class="field">
+    <%= f.label :cell_id %>
+    <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' }) %><!--to-do-->
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
+    <%= f.label :cell_kind %>
+    <%= f.select :cell_kind, cell_kind_options %>
   </div>
 
   <div class="field">
-    <%= form.label :creation_cell %>
-    <%= form.check_box :creation_cell %>
-  </div>
+    <%= f.label :creation_cell %>
+    <%= f.check_box :creation_cell %>
+  </div>  
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
