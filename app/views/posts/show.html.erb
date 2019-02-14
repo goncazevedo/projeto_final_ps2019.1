@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
-
-<%if @post.kind == "question" %>
-  <%if can? :edit, @post%>
-    <%= render 'post_tags/form', {post_tag: @post_tag} %>
-  <%end%>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Tags</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% PostTag.all.each do |post_tag| %>
-        <%if post_tag.post_id == @post.id %>
-          <tr>
-            <td><%= post_tag.tag.name %></td>
-            <%if can? :edit, @post%>
-              <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <%end%>
-          </tr>
-        <%end%>
-      <% end %>
-    </tbody>
-  </table>
+<%if can? :edit, @post%>
+  <%= render 'post_tags/form', {post_tag: @post_tag} %>
 <%end%>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% PostTag.all.each do |post_tag| %>
+      <%if post_tag.post_id == @post.id %>
+        <tr>
+          <td><%= post_tag.tag.name %></td>
+          <%if can? :edit, @post%>
+            <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%end%>
+        </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+
+
 <% if @post.user.photo.present? %>
   <strong>Photo:</strong>
   <%= image_tag (@post.user.photo.url) %>
@@ -45,12 +45,13 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @post.title %>
+  <%= @post.title%>
 </p>
+<%= tinymce %>
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <%= simple_format(@post.content) %>
 </p>
 
 <% if @post.photo.present? %>
