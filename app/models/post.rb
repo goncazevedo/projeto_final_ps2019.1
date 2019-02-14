@@ -17,5 +17,13 @@ class Post < ApplicationRecord
     question: 1
   }
 
+  validates :user_id, :title, :content, :kind, presence: true
+  
+
+  t.integer "user_id"
+  t.string "title"
+  t.text "content"
+  t.string "photo"
+  t.integer "kind"
 
 end
