@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @projects = @user.projects.where(finished: false)
+    @projects_finisheds = @user.projects.where(finished: true)
+    @articles = @user.posts.where(kind: "article")
+    @questions = @user.posts.where(kind: "question")
   end
 
   # GET /users/new
