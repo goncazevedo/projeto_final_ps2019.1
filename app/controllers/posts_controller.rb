@@ -8,12 +8,18 @@ class PostsController < ApplicationController
   end
 
   def articles
-    @articles = Post.where(kind: "article")
+    if params[:tag]
+      @posts = Post.where(kind: "article")
+      @articles = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids)
+    else
+      @articles = Post.where(kind: "article")
+    end
   end
 
   def forum
     if params[:tag] && params[:tag].strip != "" 
-      @forum = Post.where(id: Tag.find_by(name: params[:tag]).post_ids)
+      @posts = Post.where(kind: "question")
+      @forum = @posts.where(id: Tag.find_by(name: params[:tag]).post_ids)
     else
       @forum = Post.where(kind: "question")
     end
