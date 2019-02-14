@@ -52,9 +52,13 @@ $black: #010203;
         margin: 5px auto;
     }
     
-    tr {
+    .list {
+        margin: 5vh auto;
+    }
+
+    .item {
         background-color: $lighter-gray;
-        padding: 10px;
+        padding: 15px;
         margin: 5px auto;
         border-radius: 15px;
 
@@ -64,15 +68,27 @@ $black: #010203;
 
     }
 
-    .article_title {
+    .description {
+        font-style: italic;
+    }
+
+
+    .title {
         font-size: 1.5em;
         font-weight: bold;
         text-transform: uppercase;
+        letter-spacing: 0.04em;
 
         &:link, &:visited {
             text-decoration: none;
             color: $black;
         }
+    }
+
+    .button_new {
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif;
+        
     }
 }
 
