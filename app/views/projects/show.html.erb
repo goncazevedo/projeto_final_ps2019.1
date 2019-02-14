@@ -15,5 +15,20 @@
   <%= @project.finished %>
 </p>
 
+<p>
+  <strong>Adicionar Membro</strong>
+  <%= render 'project_users/form', {project_user: @project_user} %>
+</p>
+
+<p>
+  <strong>Membros</strong>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member.name %>
+      <%= link_to "Profile", member %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
