@@ -37,11 +37,9 @@ class User < ApplicationRecord
     member: 1
   }
 
-  validates :name, :board_id, :age, :board_kind, :photo, presence: true
-
   private
     def projects_board? #TODO
-      Board.find_by(id: :board_id) == 0
+      Board.find_by(name: "projetos")
     end
     
 end
