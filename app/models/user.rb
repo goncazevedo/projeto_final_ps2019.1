@@ -9,6 +9,14 @@ class User < ApplicationRecord
   belongs_to :board
   belongs_to :cell
 
+  #Relação N pra N
+  has_many :historic_boards
+  has_many :boards, through: :historic_boards
+
+  #Relação N pra N
+  has_many :historic_cells
+  has_many :cells, through: :historic_cells
+
   acts_as_commontator
 
   has_many :likes, dependent: :destroy
