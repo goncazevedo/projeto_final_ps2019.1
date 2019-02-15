@@ -3,76 +3,94 @@
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
+      
       <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <%= message %>
       <% end %>
-      </ul>
+      
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true%>
+  <div class="register_big_div">
+
+    <div class="register_field_name">
+    
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, class: "field_name"%>
+      
+    </div>
+    
+    <div class="register_field_email">
+        
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field_email" %>
+        
+    </div>
+
+    <div class="register_field_age">
+      
+        <%= f.label :age %>
+        <%= f.number_field :age, autofocus: true, class: "field_age" %>
+      
+    </div>
+
+    <div class="register_field_password">
+      
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "field_password" %>
+      
+    </div>
+
+    <div class="register_field_confirmation">
+      
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "field_password" %>
+      
+    </div>
+    
+    <div class="register_field_photo">
+            <%= f.label :photo %>
+            <%= f.file_field :photo %>
+        </div>
+
+    <div class="register_field_creation">
+          <%= f.label :creation_cell %>
+          <%= f.check_box :creation_cell %>
+    </div>  
+    
+    <div class="register_field_bid">
+      
+        <%= f.label :board_id %>
+        <%= f.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @user.board_id }, { class: 'form-control' })%>
+      
+    </div>
+
+    <div class="register_field_bkind">
+      
+        <%= f.label :board_kind %>
+        <%= f.select :board_kind, board_kind_options, class: "blue_box" %>
+      
+    </div> 
+
+    <div class="register_field_cid">
+      
+        <%= f.label :cell_id %>
+        <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' })%>
+      
+    </div>
+
+    <div class="register_field_ckind">
+      
+        <%= f.label :cell_kind %>
+        <%= f.select :cell_kind, cell_kind_options, class: "blue_box" %>
+      
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.number_field :age, autofocus: true%>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :photo %>
-    <%= f.file_field :photo%>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :board_id %>
-    <%= f.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @user.board_id }, { class: 'form-control' }) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :board_kind %>
-    <%= f.select :board_kind, board_kind_options %>
-  </div> 
-
-
-  <div class="field">
-    <%= f.label :cell_id %>
-    <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' }) %><!--to-do-->
-  </div>
-
-  <div class="field">
-    <%= f.label :cell_kind %>
-    <%= f.select :cell_kind, cell_kind_options %>
-  </div>
-
-  <div class="field">
-    <%= f.label :creation_cell %>
-    <%= f.check_box :creation_cell %>
-  </div>  
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="register_actions">
+    <%= f.submit "cadastrar", class:"register_button"  %>
   </div>
 <% end %>
