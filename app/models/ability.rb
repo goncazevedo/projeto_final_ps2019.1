@@ -11,7 +11,7 @@ class Ability
       #Permissões de acessor (Herança)
       can [:read], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
       can [:manage], Like #Dar Like
-      can [:manage], Dislike #Dar Deslike
+      can [:manage], Dislike #Dar Deslike 
       can [:create], Post #Publicar artigos e perguntas
       can [:edit], Post, user_id: user.id 
       can [:edit], User, id: user.id
@@ -25,8 +25,8 @@ class Ability
 
     if user.director?
       #Permissões de Diretor (Herança)
-
-      can [:manage], [Cell, Post, Board]
+      cannot [:manage], Board
+      can [:manage], [Cell, Post]
       can [:manage], [GoalBoard], board_id: user.board_id
       can [:edit], User, id: user.id
       #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
