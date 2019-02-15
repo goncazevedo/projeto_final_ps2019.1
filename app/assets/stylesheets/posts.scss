@@ -98,9 +98,14 @@ $black: #010203;
 
         float: right;
 
+
         &:link, &:visited {
             text-decoration: none;
             color: $white;
+        }
+
+        .options {
+            margin-top: -10px;
         }
 
     }

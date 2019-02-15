@@ -29,10 +29,10 @@
               </div>
 
               <%if can? :edit, article%>
-                  <%= link_to 'Editar', edit_post_path(article), :class => "button" %>
+                  <%= link_to 'Editar', edit_post_path(article), :class => "button options" %>
               <%end%>
               <%if can? :destroy, article%>
-                  <%= link_to 'Apagar', article, :class => "button", method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
+                  <%= link_to 'Apagar', article, :class => "button options", method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
               <%end%>
               </div>
             
