@@ -4,6 +4,7 @@ class FusionsController < ApplicationController
   # GET /fusions
   # GET /fusions.json
   def index
+    @fusion = Fusion.new
     @fusions = Fusion.all
   end
 
@@ -28,10 +29,10 @@ class FusionsController < ApplicationController
 
     respond_to do |format|
       if @fusion.save
-        format.html { redirect_to @fusion, notice: 'Fusion was successfully created.' }
+        format.html { redirect_to fusions_path, notice: 'Fusion was successfully created.' }
         format.json { render :show, status: :created, location: @fusion }
       else
-        format.html { render :new }
+        format.html { redirect_to fusions_path, notice: 'Fusion was unsuccessfully created.' }
         format.json { render json: @fusion.errors, status: :unprocessable_entity }
       end
     end

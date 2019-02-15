@@ -1,14 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Board:</strong>
-  <%= @user.board %>
-</p>
-
-<p>
-  <strong>Cell:</strong>
-  <%= @user.cell %>
-</p>
+<% if fusion? %>
+  <%= @user.name + "está em fusão da diretoria " + Board.find_by(id: @user.board_id).name + " para " + board_fusion.name %>
+<% end %>
 
 <p>
   <strong>Name:</strong>
@@ -21,13 +15,23 @@
 </p>
 
 <p>
-  <strong>Cell kind:</strong>
-  <%= @user.cell_kind %>
+  <strong>Board:</strong>
+  <%= @user.board %>
 </p>
 
 <p>
   <strong>Board kind:</strong>
   <%= @user.board_kind %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @user.cell %>
+</p>
+
+<p>
+  <strong>Cell kind:</strong>
+  <%= @user.cell_kind %>
 </p>
 
 <% if @user.photo.present? %>
