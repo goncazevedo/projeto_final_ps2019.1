@@ -63,28 +63,28 @@
     
     <div class="register_field_bid">
       
-        <%= f.label :board_id %>
+        <%= f.label "Diretoria" %>
         <%= f.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @user.board_id }, { class: 'form-control' })%>
       
     </div>
 
     <div class="register_field_bkind">
       
-        <%= f.label :board_kind %>
+        <%= f.label "Cargo" %>
         <%= f.select :board_kind, board_kind_options, class: "blue_box" %>
       
     </div> 
 
     <div class="register_field_cid">
       
-        <%= f.label :cell_id %>
+        <%= f.label "Célula" %>
         <%= f.collection_select(:cell_id, Cell.all, :id, :name, { :prompt => 'Escolha uma celula', :selected => @user.cell_id }, { class: 'form-control' })%>
       
     </div>
 
     <div class="register_field_ckind">
       
-        <%= f.label :cell_kind %>
+        <%= f.label "Cargo" %>
         <%= f.select :cell_kind, cell_kind_options, class: "blue_box" %>
       
     </div>
