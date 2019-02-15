@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% if fusion? %>
-  <%= @user.name + "está em fusão da diretoria " + Board.find_by(id: @user.board_id).name + " para " + board_fusion.name %>
+  <%= @user.name + " está em fusão da diretoria " + Board.find_by(id: @user.board_id).name + " para " + board_fusion.name %>
 <% end %>
 
 <p>
@@ -76,6 +76,26 @@
   <ul>
     <% @questions.each do |question| %>
       <li><%= link_to question.title, question %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Histórico de Diretorias</strong>
+  <ul>
+    <% @historic_boards.each do |historic| %>
+      <li><%= Board.find_by(id: historic.board_id).name %></li>
+      <li><%= "De #{l historic.created_at.to_date} até #{l historic.departure}"%></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Histórico de Células</strong>
+  <ul>
+    <% @historic_cells.each do |historic| %>
+      <li><%= Board.find_by(id: historic.cell_id).name %></li>
+      <li><%= "De #{l historic.created_at.to_date} até #{l historic.departure}" %></li>
     <% end %>
   </ul>
 </p>

@@ -16,6 +16,9 @@ class UsersController < ApplicationController
     @projects_finisheds = @user.projects.where(finished: true)
     @articles = @user.posts.where(kind: "article")
     @questions = @user.posts.where(kind: "question")
+    
+    @historic_boards = HistoricBoard.where(user_id: @user.id)
+    @historic_cells = HistoricCell.where(user_id: @user.id)
   end
 
   # GET /users/new
