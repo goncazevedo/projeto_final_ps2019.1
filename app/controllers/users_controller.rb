@@ -12,13 +12,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @projects = @user.projects.where(finished: false)
-    @projects_finisheds = @user.projects.where(finished: true)
-    @articles = @user.posts.where(kind: "article")
-    @questions = @user.posts.where(kind: "question")
+    @projects = @user.projects.where(finished: false) #Todos os projetos em andamento, no qual o usuario faz parte, para mostrar no show
+    @projects_finisheds = @user.projects.where(finished: true) #Todos os projetos Finalizados, no qual o usuario é membro, para mostrar no show
+
+    @articles = @user.posts.where(kind: "article") #Todos os artigos criados pelo usuario para aparecer no show
+    @questions = @user.posts.where(kind: "question") #Todas as perguntas do usuário para aparecer no show
     
-    @historic_boards = HistoricBoard.where(user_id: @user.id)
-    @historic_cells = HistoricCell.where(user_id: @user.id)
+    @historic_boards = HistoricBoard.where(user_id: @user.id) #Histórico de Diretorias para aparecer no show do user
+    @historic_cells = HistoricCell.where(user_id: @user.id) #Histórido de células para aparecer no show do user
   end
 
   # GET /users/new
