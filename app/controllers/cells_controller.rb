@@ -19,6 +19,7 @@ class CellsController < ApplicationController
   # GET /cells/new
   def new
     @cell = Cell.new
+    @boards = Board.all
   end
 
   # GET /cells/1/edit
@@ -28,6 +29,7 @@ class CellsController < ApplicationController
   # POST /cells
   # POST /cells.json
   def create
+    @boards = Board.all
     @cell = Cell.new(cell_params)
 
     respond_to do |format|
@@ -73,6 +75,6 @@ class CellsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cell_params
-      params.require(:cell).permit(:name, :description)
+      params.require(:cell).permit(:name, :description, :board_id)
     end
 end

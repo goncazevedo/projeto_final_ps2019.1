@@ -30,6 +30,19 @@
   <% end %>
 </p>
 
+
+<% if @board.cells != [] %>
+  <p>
+    <strong>Células</strong>
+    <ul>
+      <% @board.cells.each do |cell| %>
+        <li><%= link_to cell.name, cell %></li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>
+
+
 <p>Metas em Andamento</p>
 <ul>
   <% @goals.each do |goal| %>
