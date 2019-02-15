@@ -33,6 +33,7 @@ class User < ApplicationRecord
   has_many :boards, through: :fusions
 
   validates :name, :age, :board_id, :board_kind,  presence: true
+  validate :age_interval
   validates :cell_id, :cell_kind, presence: true, if: :projects_board?
 
   enum board_kind: {
@@ -50,4 +51,9 @@ class User < ApplicationRecord
       Board.find_by(name: "projetos")
     end
     
+    def age_interval
+      if self.age < 0 || self.age > 200
+        errors.add(:age_not_valid, "The age must be between 0 and 200 years")
+      end
+    end
 end
