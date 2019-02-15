@@ -459,3 +459,244 @@ fatal: no upstream configured for branch 'frontend-artigos'
 fatal: no upstream configured for branch 'frontend-artigos'
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
+> git show :app/views/posts/new_article.html.erb
+> git show :app/assets/stylesheets/new_article.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/posts/_form.html.erb
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/posts/show.html.erb
+> git show :app/views/posts/show.json.jbuilder
+> git show :app/views/posts/show.html.erb
+> git show :app/views/posts/new_question.html.erb
+> git show :app/views/posts/new_article.html.erb
+> git show :app/views/posts/index.json.jbuilder
+> git show :app/views/posts/index.html.erb
+> git show :app/views/posts/forum.html.erb
+> git show :app/views/posts/edit.html.erb
+> git show :app/views/posts/articles.html.erb
+> git show :app/views/posts/show.html.erb
+> git show :app/assets/stylesheets/posts.scss
+> git show :app/assets/stylesheets/posts_show.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/posts.scss
+> git show :app/views/posts/forum.html.erb
+> git show :app/views/posts/new_article.html.erb
+> git show :app/assets/stylesheets/posts.scss
+> git show :app/views/posts/show.html.erb
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/new_article.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/dislikes.scss
+> git show :app/assets/stylesheets/posts_show.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/config.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/cells.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/config.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git show :app/assets/stylesheets/posts_show.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/cells.scss
+> git show :app/assets/stylesheets/new_article.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/users.scss
+> git show :app/assets/stylesheets/task_cells.scss
+> git show :app/assets/stylesheets/task_boards.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/tags.scss
+> git show :app/assets/stylesheets/reset.css
+> git show :app/assets/stylesheets/projects.scss
+> git show :app/assets/stylesheets/project_users.scss
+> git show :app/assets/stylesheets/project_tags.scss
+> git show :app/assets/stylesheets/posts.scss
+> git show :app/assets/stylesheets/posts_show.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/new_article.scss
+> git show :app/assets/stylesheets/navbar.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/login.scss
+> git show :app/assets/stylesheets/config.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/navbar.scss
+> git show :app/assets/stylesheets/login.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/likes.scss
+> git show :app/assets/stylesheets/goal_cells.scss
+> git show :app/assets/stylesheets/goal_boards.scss
+> git show :app/assets/stylesheets/fusions.scss
+> git show :app/assets/stylesheets/forgot_password.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/dislikes.scss
+> git show :app/assets/stylesheets/config.scss
+> git ls-files --stage -- app/assets/stylesheets/
+> git show :app/assets/stylesheets/cells.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/boards.scss
+> git show :app/assets/stylesheets/application.css
