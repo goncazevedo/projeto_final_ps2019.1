@@ -21,7 +21,7 @@ pt-BR:
       user: Usuário
 
     attributes:
-      boards: 
+      board: 
         name: Nome
         description: Descrição
         created_at: Criado em
@@ -33,19 +33,19 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      dislikes: 
+      dislike: 
         post_id: ID da publicação
         user_id: ID do usuário
         created_at: Criado em
         updated_at: Atualizado em
 
-      fusions: 
+      fusion: 
         user_id: ID do usuário
         board_id: ID da diretoria
         created_at: Criado em
         updated_at: Atualizado em
 
-      goal_boards:
+      goal_board:
         name: Nome
         deadline: Prazo
         finished: Finalizado
@@ -53,7 +53,7 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      goal_cells: 
+      goal_cell: 
         name: Nome
         deadline: Prazo
         finished: Finalizado
@@ -61,19 +61,19 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      likes:
+      like:
         post_id: ID da publicação
         user_id: ID do usuário
         created_at: Criado em
         updated_at: Atualizado em
 
-      post_tags: 
+      post_tag: 
         tag_id: ID da tag
         post_id: ID da publicação
         created_at: Criado em
         updated_at: Atualizado em
 
-      posts:
+      post:
         user_id: ID do usuário
         title: Título
         content: Conteúdo
@@ -82,33 +82,33 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      project_tags: 
+      project_tag: 
         tag_id: ID da tag
         project_id: ID do projeto
         created_at: Criado em
         updated_at: Atualizado em
 
-      project_users: 
+      project_user: 
         users_id: ID do usuário
         project_id: ID do projeto
         created_at: Criado em
         updated_at: Atualizado em
 
-      projects:
+      project:
         title: Título
         deadline: Prazo
         finished: Finalizado
         created_at: Criado em
         updated_at: Atualizado em
 
-      tags:
+      tag:
         name: Nome
         project: Projeto
         post: Publicação
         created_at: Criado em
         updated_at: Atualizado em
 
-      task_boards:
+      task_board:
         name: Nome
         description: Descrição
         finished: Finalizado
@@ -116,7 +116,7 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      task_cells: 
+      task_cell: 
         name: Nome
         description: Descrição
         finished: Finalizado
@@ -124,7 +124,7 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
 
-      users:
+      user:
         name: Nome
         age: Idade
         board_id: ID da diretoria
