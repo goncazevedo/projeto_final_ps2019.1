@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fusions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Board</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fusions.each do |fusion| %>
+      <tr>
+        <td><%= User.find_by(id: fusion.user_id).name %></td>
+        <td><%= Board.find_by(id: fusion.board_id).name %></td>
+        <td><%= link_to 'Destroy', fusion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= render 'fusions/form' %>
