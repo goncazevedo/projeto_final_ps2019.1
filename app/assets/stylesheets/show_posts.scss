@@ -8,5 +8,43 @@
     padding: 50px;
     border-radius: 15px;
 
+    .user_box {
+        margin-bottom: 2.5%;
+        line-height: 120%;
+    }
+
+    .user_name {
+        font-family: $font-lato;
+        font-size: 1em;
+        font-weight: bold;
+        color: $black;
+    }
+
+    .user_board {
+        font-family: $font-lato;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        color: $black;
+
+    }
+
+    .post_title {
+        font-family: $font-lato;
+        font-size: 1.25em;
+        font-style: italic;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    .post_content {
+        font-family: $font-lato;
+        font-size: 1em;
+        color: $black;
+    }
+
+    p {
+        font-family: $font-lato;
+    }
 
 }

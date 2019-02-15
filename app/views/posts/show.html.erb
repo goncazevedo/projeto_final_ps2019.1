@@ -10,7 +10,7 @@
           <tr>
             <td><%= post_tag.tag.name %></td>
             <%if can? :edit, @post%>
-              <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Destroy', post_tag, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
             <%end%>
           </tr>
         <%end%>
@@ -24,24 +24,22 @@
   <% end %>
 
 
-  <p>
-    <strong>Cargo:</strong>
+
+  <div class="user_box">
+    <p class="user_name">
+      <%= @post.user.name %>
+    </p>
+    <p class="user_board" >
     <%= "#{@post.user.board_kind} de #{@post.user.board.name}" %>
-  </p>
+    </p>
+  </div>
 
-  <p>
-    <strong>User:</strong>
-    <%= @post.user.name %>
-  </p>
-
-  <p>
-    <strong>Title:</strong>
+  <p class="post_title">
     <%= @post.title%>
   </p>
   <%= tinymce %>
 
-  <p>
-    <strong>Content:</strong>
+  <p class="post_content">
     <%= simple_format(@post.content) %>
   </p>
 

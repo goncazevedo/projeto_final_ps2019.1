@@ -1103,3 +1103,879 @@ fatal: no upstream configured for branch 'frontend-artigos'
 fatal: no upstream configured for branch 'frontend-artigos'
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
+> git show :app/views/posts/show.html.erb
+> git show :app/assets/stylesheets/show_posts.scss
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/views/commontator/comments/_show.html.erb
+> git check-ignore -z --stdin
+> git show :app/assets/stylesheets/commontator/application.css
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/threads.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/commontator/threads.css~
+> git show :app/assets/stylesheets/commontator/threads.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/threads.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/application.css
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/threads.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/assets/stylesheets/commontator/threads.css~
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/application.css
+> git show :app/assets/stylesheets/commontator/comments.css
+> git show :app/assets/stylesheets/commontator/threads.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse frontend-artigos
+> git rev-parse --symbolic-full-name frontend-artigos@{u}
+fatal: no upstream configured for branch 'frontend-artigos'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose

@@ -37,7 +37,8 @@ http://www.strangerstudios.com/sandbox/pagination/diggstyle.php */
 	border: 1px solid #999;
 	
 	text-decoration: none;
-	color: #666;
+  color: #666;
+  
 }
 
 .thread_pagination a:hover,
