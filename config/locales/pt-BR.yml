@@ -1,0 +1,138 @@
+pt-BR:
+  true: Sim
+  false: Não
+  activerecord:
+    models:
+      board: Diretoria
+      cell: Célula
+      dislike: Não gostei
+      fusion: Fusão
+      goal_board: Meta da Diretoria
+      goal_cell: Meta da Célula
+      like: Gostei
+      post_tag: Tag da Publicação
+      post: Publicação
+      project_tag: Tag do Projeto
+      project_user: Projeto do Usuário
+      project: Projeto
+      tag: Tag
+      task_board: Tarefa da Diretoria
+      task_cell: Tarefa da Célula
+      user: Usuário
+
+    attributes:
+      board: 
+        name: Nome
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      cell:
+        name: Nome
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      dislike: 
+        post_id: ID da publicação
+        user_id: ID do usuário
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      fusion: 
+        user_id: ID do usuário
+        board_id: ID da diretoria
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      goal_board:
+        name: Nome
+        deadline: Prazo
+        finished: Finalizado
+        board_id: ID da diretoria 
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      goal_cell: 
+        name: Nome
+        deadline: Prazo
+        finished: Finalizado
+        cell_id: ID da célula
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      like:
+        post_id: ID da publicação
+        user_id: ID do usuário
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      post_tag: 
+        tag_id: ID da tag
+        post_id: ID da publicação
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      post:
+        user_id: ID do usuário
+        title: Título
+        content: Conteúdo
+        photo: Foto
+        kind: Tipo
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      project_tag: 
+        tag_id: ID da tag
+        project_id: ID do projeto
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      project_user: 
+        users_id: ID do usuário
+        project_id: ID do projeto
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      project:
+        title: Título
+        deadline: Prazo
+        finished: Finalizado
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      tag:
+        name: Nome
+        project: Projeto
+        post: Publicação
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      task_board:
+        name: Nome
+        description: Descrição
+        finished: Finalizado
+        goal_board_id: ID da meta da diretoria
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      task_cell: 
+        name: Nome
+        description: Descrição
+        finished: Finalizado
+        goal_cell_id: ID da meta da célula
+        created_at: Criado em
+        updated_at: Atualizado em
+
+      user:
+        name: Nome
+        age: Idade
+        board_id: ID da diretoria
+        cell_id: ID da célula
+        cell_kind: Cargo na célula
+        board_kind: Cargo na diretoria
+        photo: Foto
+        creation_cell: Célula de criação
+        admin: Administrador
+        created_at: Criado em
+        updated_at: Atualizado em

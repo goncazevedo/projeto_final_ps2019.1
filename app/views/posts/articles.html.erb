@@ -25,7 +25,7 @@
               <div class="item">
               <%= link_to article.title, article, :class => "title" %>
               <div class="description"> 
-                criado por <%= article.user.name %>, em <%= article.created_at.to_date%>
+                criado por <%= article.user.name %>, em <%= l article.created_at.to_date%>
               </div>
 
               <%if can? :edit, article%>

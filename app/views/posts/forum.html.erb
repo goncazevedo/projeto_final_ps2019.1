@@ -23,7 +23,7 @@
         <tr>
             <td><%= question.user.name %></td>
             <td><%= question.title %></td>
-            <td><%= question.created_at %></td>
+            <td><%= l question.created_at %></td>
             <td><%= link_to 'Show', question %></td>
             <%if can? :edit, question%>
                 <td><%= link_to 'Edit', edit_post_path(question) %></td>
