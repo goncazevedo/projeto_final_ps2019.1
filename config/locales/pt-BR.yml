@@ -24,38 +24,54 @@ pt-BR:
       boards: 
         name: Nome
         description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
 
       cell:
         name: Nome
         description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
 
       dislikes: 
         post_id: ID da publicação
         user_id: ID do usuário
+        created_at: Criado em
+        updated_at: Atualizado em
 
       fusions: 
         user_id: ID do usuário
         board_id: ID da diretoria
+        created_at: Criado em
+        updated_at: Atualizado em
 
       goal_boards:
         name: Nome
         deadline: Prazo
         finished: Finalizado
         board_id: ID da diretoria 
+        created_at: Criado em
+        updated_at: Atualizado em
 
       goal_cells: 
         name: Nome
         deadline: Prazo
         finished: Finalizado
         cell_id: ID da célula
+        created_at: Criado em
+        updated_at: Atualizado em
 
       likes:
         post_id: ID da publicação
         user_id: ID do usuário
+        created_at: Criado em
+        updated_at: Atualizado em
 
       post_tags: 
         tag_id: ID da tag
         post_id: ID da publicação
+        created_at: Criado em
+        updated_at: Atualizado em
 
       posts:
         user_id: ID do usuário
@@ -63,36 +79,50 @@ pt-BR:
         content: Conteúdo
         photo: Foto
         kind: Tipo
+        created_at: Criado em
+        updated_at: Atualizado em
 
       project_tags: 
         tag_id: ID da tag
         project_id: ID do projeto
+        created_at: Criado em
+        updated_at: Atualizado em
 
       project_users: 
         users_id: ID do usuário
         project_id: ID do projeto
+        created_at: Criado em
+        updated_at: Atualizado em
 
       projects:
         title: Título
         deadline: Prazo
         finished: Finalizado
+        created_at: Criado em
+        updated_at: Atualizado em
 
       tags:
         name: Nome
         project: Projeto
         post: Publicação
+        created_at: Criado em
+        updated_at: Atualizado em
 
       task_boards:
         name: Nome
         description: Descrição
         finished: Finalizado
         goal_board_id: ID da meta da diretoria
+        created_at: Criado em
+        updated_at: Atualizado em
 
       task_cells: 
         name: Nome
         description: Descrição
         finished: Finalizado
         goal_cell_id: ID da meta da célula
+        created_at: Criado em
+        updated_at: Atualizado em
 
       users:
         name: Nome
@@ -104,79 +134,5 @@ pt-BR:
         photo: Foto
         creation_cell: Célula de criação
         admin: Administrador
-
-      classroom:
-        number: Número
-        period_id: ID do Período
-        teacher_id: ID do Professor
-        subject_id: ID da Disciplina
         created_at: Criado em
         updated_at: Atualizado em
-      course:
-        name: Nome
-        department_id: ID do Departamento
-        created_at: Criado em
-        updated_at: Atualizado em
-      department:
-        name: Nome
-        created_at: Criado em
-        updated_at: Atualizado em
-      equivalence:
-        subject_id: ID da Disciplina
-        discipline_id: ID da Disciplina Equivalente
-        created_at: Criado em
-        updated_at: Atualizado em
-      lesson:
-        time: Dia e Hora
-        duration: Duração
-        classroom_id: ID da Turma
-        created_at: Criado em
-        updated_at: Atualizado em
-      period:
-        number: Número
-        created_at: Criado em
-        updated_at: Atualizado em
-      student_classroom:
-        student_id: ID do Aluno
-        classroom_id: ID da Turma
-        created_at: Criado em
-        updated_at: Atualizado em
-      student_lesson:
-        student_id: ID do Aluno
-        lesson_id: ID da Aula
-        presence: Presença
-        created_at: Criado em
-        updated_at: Atualizado em
-      student:
-        name: Nome
-        registration: Matrícula
-        course_id: ID do Curso
-        created_at: Criado em
-        updated_at: Atualizado em
-      subject_course:
-        course_id: ID do Curso
-        subject_id: ID da Disciplina
-        created_at: Criado em
-        updated_at: Atualizado em
-      subject:
-        name: Nome
-        workload: Carga Horária
-        department_id: ID do Departamento
-        created_at: Criado em
-        updated_at: Atualizado em
-      teacher:
-        name: "Nome"
-        department_id: ID do Departamento
-        created_at: Criado em
-        updated_at: Atualizado em
-      user:
-        email: E-mail
-        encrypted_password: Senha criptografada
-        reset_password_token: Símbolo para resetar Senha
-        photo: Foto
-        kind: Tipo
-        name: Nome
-        created_at: Criado em
-        updated_at: Atualizado em
-        reset_password_sent_at: Senha Resetável enviada em
-        remember_created_at: Relembrar enviado em
