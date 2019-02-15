@@ -27,7 +27,9 @@
       <li><strong>Name: </strong><%= task.name %></li>
       <li><strong>Description: </strong><%= task.description %></li>
       <%= link_to 'Edit', {:controller => "task_boards", :action => "edit", goal_board: @goal_board.id, id: task.id} %>
-      <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%if can? :destroy, task%>
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%end%>
     </ul>
   <% end %>
 </p>
@@ -39,7 +41,9 @@
       <li><strong>Name: </strong><%= task.name %></li>
       <li><strong>Description: </strong><%= task.description %></li>
       <%= link_to 'Edit', {:controller => "task_boards", :action => "edit", goal_board: @goal_board.id, id: task.id} %>
-      <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%if can? :destroy, task%>
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%end%>
     </ul>
   <% end %>
 </p>
