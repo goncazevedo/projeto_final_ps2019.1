@@ -61,7 +61,7 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @post.created_at.to_date %>
+  <%=l @post.created_at.to_date %>
 </p>
 
 <%= button_to 'Like', post_likes_path(@post), method: :post %>
@@ -74,9 +74,4 @@
 
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%if @post.kind == "article"%>
-  <%= link_to 'Back', articles_path %>
-<%elsif @post.kind == "question"%>
-  <%= link_to 'Back', forum_path %>
-<%end%>
+<%= link_to 'Edit', edit_post_path(@post) %>
