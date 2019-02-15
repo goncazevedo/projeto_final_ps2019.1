@@ -1,0 +1,182 @@
+pt-BR:
+  true: Sim
+  false: Não
+  activerecord:
+    models:
+      board: Diretoria
+      cell: Célula
+      dislike: Não gostei
+      fusion: Fusão
+      goal_board: Meta da Diretoria
+      goal_cell: Meta da Célula
+      like: Gostei
+      post_tag: Tag da Publicação
+      post: Publicação
+      project_tag: Tag do Projeto
+      project_user: Projeto do Usuário
+      project: Projeto
+      tag: Tag
+      task_board: Tarefa da Diretoria
+      task_cell: Tarefa da Célula
+      user: Usuário
+
+    attributes:
+      boards: 
+        name: Nome
+        description: Descrição
+
+      cell:
+        name: Nome
+        description: Descrição
+
+      dislikes: 
+        post_id: ID da publicação
+        user_id: ID do usuário
+
+      fusions: 
+        user_id: ID do usuário
+        board_id: ID da diretoria
+
+      goal_boards:
+        name: Nome
+        deadline: Prazo
+        finished: Finalizado
+        board_id: ID da diretoria 
+
+      goal_cells: 
+        name: Nome
+        deadline: Prazo
+        finished: Finalizado
+        cell_id: ID da célula
+
+      likes:
+        post_id: ID da publicação
+        user_id: ID do usuário
+
+      post_tags: 
+        tag_id: ID da tag
+        post_id: ID da publicação
+
+      posts:
+        user_id: ID do usuário
+        title: Título
+        content: Conteúdo
+        photo: Foto
+        kind: Tipo
+
+      project_tags: 
+        tag_id: ID da tag
+        project_id: ID do projeto
+
+      project_users: 
+        users_id: ID do usuário
+        project_id: ID do projeto
+
+      projects:
+        title: Título
+        deadline: Prazo
+        finished: Finalizado
+
+      tags:
+        name: Nome
+        project: Projeto
+        post: Publicação
+
+      task_boards:
+        name: Nome
+        description: Descrição
+        finished: Finalizado
+        goal_board_id: ID da meta da diretoria
+
+      task_cells: 
+        name: Nome
+        description: Descrição
+        finished: Finalizado
+        goal_cell_id: ID da meta da célula
+
+      users:
+        name: Nome
+        age: Idade
+        board_id: ID da diretoria
+        cell_id: ID da célula
+        cell_kind: Cargo na célula
+        board_kind: Cargo na diretoria
+        photo: Foto
+        creation_cell: Célula de criação
+        admin: Administrador
+
+      classroom:
+        number: Número
+        period_id: ID do Período
+        teacher_id: ID do Professor
+        subject_id: ID da Disciplina
+        created_at: Criado em
+        updated_at: Atualizado em
+      course:
+        name: Nome
+        department_id: ID do Departamento
+        created_at: Criado em
+        updated_at: Atualizado em
+      department:
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em
+      equivalence:
+        subject_id: ID da Disciplina
+        discipline_id: ID da Disciplina Equivalente
+        created_at: Criado em
+        updated_at: Atualizado em
+      lesson:
+        time: Dia e Hora
+        duration: Duração
+        classroom_id: ID da Turma
+        created_at: Criado em
+        updated_at: Atualizado em
+      period:
+        number: Número
+        created_at: Criado em
+        updated_at: Atualizado em
+      student_classroom:
+        student_id: ID do Aluno
+        classroom_id: ID da Turma
+        created_at: Criado em
+        updated_at: Atualizado em
+      student_lesson:
+        student_id: ID do Aluno
+        lesson_id: ID da Aula
+        presence: Presença
+        created_at: Criado em
+        updated_at: Atualizado em
+      student:
+        name: Nome
+        registration: Matrícula
+        course_id: ID do Curso
+        created_at: Criado em
+        updated_at: Atualizado em
+      subject_course:
+        course_id: ID do Curso
+        subject_id: ID da Disciplina
+        created_at: Criado em
+        updated_at: Atualizado em
+      subject:
+        name: Nome
+        workload: Carga Horária
+        department_id: ID do Departamento
+        created_at: Criado em
+        updated_at: Atualizado em
+      teacher:
+        name: "Nome"
+        department_id: ID do Departamento
+        created_at: Criado em
+        updated_at: Atualizado em
+      user:
+        email: E-mail
+        encrypted_password: Senha criptografada
+        reset_password_token: Símbolo para resetar Senha
+        photo: Foto
+        kind: Tipo
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em
+        reset_password_sent_at: Senha Resetável enviada em
+        remember_created_at: Relembrar enviado em

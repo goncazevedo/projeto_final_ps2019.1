@@ -20,6 +20,8 @@ Cell.create(name: "vazia", description: "Célula Vazia")
 
 User.create(name: "Natalia Coinbra", age: 18, email:"natalia@email.com", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
 
+User.create(name: "admin", age: 100, email: "admin@admin.com" password: "123456" board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
+
 GoalBoard.create(name: "Terminar Projeto", deadline: "2019-02-12",finished: false, board_id: 1)
 
 GoalCell.create(name: "Layout", deadline: "2019-02-12",finished: false, cell_id: 1)
