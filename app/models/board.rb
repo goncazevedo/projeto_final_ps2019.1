@@ -4,6 +4,10 @@ class Board < ApplicationRecord
     has_many :cells
 
     #Relação N pra N
+    has_many :historic_boards
+    has_many :users, through: :historic_boards
+
+    #Relação N pra N
     has_many :fusions
     has_many :users, through: :fusions
 
