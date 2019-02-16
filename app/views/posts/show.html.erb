@@ -4,7 +4,7 @@
     <%= render 'post_tags/form', {post_tag: @post_tag} %>
   <%end%>
 
-
+ 
       <% PostTag.all.each do |post_tag| %>
         <%if post_tag.post_id == @post.id %>
           <tr>
@@ -15,6 +15,7 @@
           </tr>
         <%end%>
       <% end %>
+  
 
 
   <div class="user_photo">
@@ -33,6 +34,13 @@
     <%= "#{@post.user.board_kind} de #{@post.user.board.name}" %>
     </p>
   </div>
+  
+  <div class="post_photo">
+    <% if @post.photo.present? %>
+        <%= image_tag (@post.photo.url) %>
+      <% end %>
+  </div>
+
 
   <p class="post_title">
     <%= @post.title%>
@@ -43,31 +51,20 @@
     <%= simple_format(@post.content) %>
   </p>
 
-  <% if @post.photo.present? %>
-    <strong>Photo:</strong>
-    <%= image_tag (@post.photo.url) %>
-  <% end %>
-
+  
   <p>
     <strong>Date:</strong>
     <%= @post.created_at.to_date %>
   </p>
 
-  <%= button_to 'Like', post_likes_path(@post), method: :post %>
+  <%= button_to 'Curtir', post_likes_path(@post), method: :post, :class => "button"%>
   <p><%=@post.likes.length%></p>
 
-  <%= button_to 'Dislike', post_dislikes_path(@post), method: :post %>
+  <%= button_to 'Descurtir', post_dislikes_path(@post), method: :post, :class => "button" %>
   <p><%=@post.dislikes.length%></p>
 
   <%= commontator_thread(@post) %>
 
 
-
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%if @post.kind == "article"%>
-    <%= link_to 'Back', articles_path %>
-  <%elsif @post.kind == "question"%>
-    <%= link_to 'Back', forum_path %>
-  <%end%>
 
 </div>
