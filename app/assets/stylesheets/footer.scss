@@ -1,0 +1,32 @@
+@import 'config';
+
+footer {
+    width: 100vw;
+    height: 80px;
+    background-color: $darker-blue;
+    
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+
+        p {
+            font-family: $font-lato;
+            font-size: 1.125em;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: $white;
+            float: left;
+
+            padding-top: 35px;
+        }
+
+        .footer_logo {
+            height: 50px;
+            width: auto;
+            float: right;
+
+            padding-top: 15px;
+        }
+    }
+
+}
