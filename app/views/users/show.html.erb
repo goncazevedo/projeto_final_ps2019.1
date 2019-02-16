@@ -11,6 +11,8 @@
   <%= @user.name + " está em fusão da diretoria " + Board.find_by(id: @user.board_id).name + " para " + board_fusion.name %>
 <% end %>
 
+<%= link_to  "Criar fusão", fusions_path %>
+
 <div class="user_name">
   <p id="name">
     <strong></strong>

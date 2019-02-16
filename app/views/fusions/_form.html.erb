@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.collection_select(:user_id, User.all, :id, :name, { :prompt => 'Escolha um Usuario', :selected => @fusion.user_id }, { class: 'form-control' })%>
   </div>
 
   <div class="field">
     <%= form.label :board_id %>
-    <%= form.text_field :board_id %>
+    <%= form.collection_select(:board_id, Board.all, :id, :name, { :prompt => 'Escolha uma diretoria', :selected => @fusion.board_id }, { class: 'form-control' })%>
   </div>
 
   <div class="actions">
