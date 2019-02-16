@@ -1,7 +1,8 @@
-<h1>Editing</h1> <%=@post.kind%>
+<div class="edit_forum">
+    <h1>Editar tópico</h1>
+    <div class="line"></div>
 
 
-<%= render 'form', {post: @post, kind: @post.kind} %>
+    <%= render 'form', {post: @post, kind: @post.kind} %>
+    </div>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
