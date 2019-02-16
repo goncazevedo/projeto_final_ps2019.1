@@ -1,5 +1,6 @@
-<h1>Home<h1>
-<%Post.where(kind: "article").each do |post|%>
-    <%= render  "posts/show", post: post %>
-    <br>
-<%end%>
+<section class="homepage">
+    <%Post.where(kind: "article").each do |post|%>
+        <%= render  "posts/show", post: post %>
+        <br>
+    <%end%>
+</div>
