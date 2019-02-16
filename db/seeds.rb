@@ -18,7 +18,7 @@ Cell.create(name: 'PMO', description: 'Célula de PMO', board_id: 2)
 Board.create(name: "Financeiro", description: "Diretoria Financeira")
 Cell.create(name: "vazia", description: "Célula Vazia", board_id: 2)
 
-User.create(name: "Natalia Coinbra", age: 18, email:"natalia@email.com", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
+User.create(name: "Natalia Coinbra", age: 18, email:"natalia@injunior.com.br", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
 
 User.create(name: "admin", age: 100, email: "admin@admin.com", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
 
