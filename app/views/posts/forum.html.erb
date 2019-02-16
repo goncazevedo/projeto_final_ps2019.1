@@ -17,21 +17,26 @@
   
       <% @forum.each do |question| %>
           
-              <%= question.user.name %></td>
-              <%= question.title %></td>
-              <%= l question.created_at %></td>
-              <%= link_to 'Show', question %></td>
-              <%if can? :edit, question%>
-                  <%= link_to 'Edit', edit_post_path(question) %>
-              <%end%>
-              <%if can? :destroy, question%>
-                  <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
-              <%end%>
+            <div class="forum_box">
+              <div class="item">
+              <%= link_to question.title, question, :class => "title" %>
+                <div class="description">
+                  criado por <%= question.user.name %> em <%= l question.created_at %>
+                  <%if can? :edit, question%>
+                      <%= link_to 'Editar', edit_post_path(question), :class => "button options" %>
+                  <%end%>
+                  <%if can? :destroy, question%>
+                      <%= link_to 'Apagar', question, :class => "button options", method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+            
       <% end %>
 
   <br>
 
 
 
-  <%= link_to 'Novo tópico', new_question_path %>
+  <%= link_to 'Novo tópico', new_question_path, :class => "button" %>
 </section>
