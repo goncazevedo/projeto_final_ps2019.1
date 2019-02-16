@@ -14,12 +14,12 @@ class LikesController < ApplicationController
             end
         end
 
-        redirect_to post_path(@post)
+        redirect_to request.referrer
     end
 
     def destroy
         @like.destroy
-        redirect_to post_path(@post)
+        redirect_to request.referrer
     end
 
     private  

@@ -13,12 +13,12 @@ class DislikesController < ApplicationController
                 @post.likes.destroy(@like)
             end
         end
-        redirect_to post_path(@post)
+        redirect_to request.referrer
     end
 
     def destroy
         @dislike.destroy
-        redirect_to post_path(@post)
+        redirect_to request.referrer
     end
 
     private  
