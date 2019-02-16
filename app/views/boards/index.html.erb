@@ -20,8 +20,8 @@
             <div class="board_edit"><p><%= link_to image_tag('edit.svg', :alt => 'Edit', :class => "board_icon"), edit_board_path(board) %></p></div>
             <div class="board_destroy"><p><%= link_to image_tag('delete.svg', :alt => "Destroy", :class => "board_icon"), board, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
             <div class="board_description"><p><%= board.description %></p></div>
-            <div class="board_id"><p><%= "Membros #{User.where(board_id: board.id).length}" %></p></div>
-            <div class="board_goal"><p><%= "Metas #{board.goal_boards.length}"%></p></div>
+            <div class="board_id"><p><%= "Membros: #{User.where(board_id: board.id).length}" %></p></div>
+            <div class="board_goal"><p><%= "Metas: #{board.goal_boards.length}"%></p></div>
             <div class="board_more"><p><%= link_to 'Ver Detalhes', board %></p></div>
           </div>
         </tr>
