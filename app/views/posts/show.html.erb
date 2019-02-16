@@ -33,6 +33,13 @@
     <%= "#{@post.user.board_kind} de #{@post.user.board.name}" %>
     </p>
   </div>
+  
+  <div class="post_photo">
+    <% if @post.photo.present? %>
+        <%= image_tag (@post.photo.url) %>
+      <% end %>
+  </div>
+
 
   <p class="post_title">
     <%= @post.title%>
@@ -43,11 +50,7 @@
     <%= simple_format(@post.content) %>
   </p>
 
-  <% if @post.photo.present? %>
-    <strong>Photo:</strong>
-    <%= image_tag (@post.photo.url) %>
-  <% end %>
-
+  
   <p>
     <strong>Date:</strong>
     <%= @post.created_at.to_date %>

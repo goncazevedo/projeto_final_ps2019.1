@@ -59,4 +59,14 @@
         font-family: $font-lato;
     }
 
+    .post_photo {
+        img {
+            width: 100%;
+            height: 335px;
+            border-radius: 15px;
+            margin: 10px 0;
+
+        }
+    }
+
 }
