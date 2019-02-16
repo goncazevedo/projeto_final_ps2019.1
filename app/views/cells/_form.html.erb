@@ -21,6 +21,11 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :board_id %>
+    <%= form.select :board_id, Board.all.collect { |board| [board.name, board.id] } %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

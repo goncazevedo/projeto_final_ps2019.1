@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_135808) do
+ActiveRecord::Schema.define(version: 2019_02_15_174832) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_02_15_135808) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "board_id"
+    t.index ["board_id"], name: "index_cells_on_board_id"
   end
 
   create_table "commontator_comments", force: :cascade do |t|
@@ -109,6 +111,7 @@ ActiveRecord::Schema.define(version: 2019_02_15_135808) do
     t.date "departure"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "entry"
     t.index ["board_id"], name: "index_historic_boards_on_board_id"
     t.index ["user_id"], name: "index_historic_boards_on_user_id"
   end
@@ -119,6 +122,7 @@ ActiveRecord::Schema.define(version: 2019_02_15_135808) do
     t.date "departure"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "entry"
     t.index ["cell_id"], name: "index_historic_cells_on_cell_id"
     t.index ["user_id"], name: "index_historic_cells_on_user_id"
   end

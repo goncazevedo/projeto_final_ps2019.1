@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :set_old_board, only: [:update]
   before_action :set_old_cell, only: [:update]
@@ -57,12 +58,12 @@ class UsersController < ApplicationController
         format.json { render :show, status: :ok, location: @user }
 
         if @old_board != @user.board_id
-          historic = HistoricBoard.create(user_id: @user.id, board_id: @old_board, departure: Time.now)
+          historic = HistoricBoard.create(user_id: @user.id, board_id: @old_board, departure: Time.now, entry: entry_time_board)
           historic.save
         end
 
         if @old_cell != @user.cell_id
-          historic = HistoricCell.create(user_id: @user.id, cell_id: @old_cell, departure: Time.now)
+          historic = HistoricCell.create(user_id: @user.id, cell_id: @old_cell, departure: Time.now, entry: entry_time_cell)
           historic.save
         end
 
@@ -101,4 +102,21 @@ class UsersController < ApplicationController
     def set_old_cell
       @old_cell = @user.cell_id
     end
+
+    def entry_time_board
+      if @user.historic_boards == []
+        return @user.created_at
+      else
+        return @user.historic_boards.last.departure
+      end
+    end
+    
+    def entry_time_cell
+      if @user.historic_cells == []
+        return @user.created_at
+      else
+        return @user.historic_cells.last.departure
+      end
+    end
+
 end

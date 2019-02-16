@@ -16,7 +16,7 @@
 
 <p>
   <strong>Board:</strong>
-  <%= @user.board %>
+  <%= @user.board.name %>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
 
 <p>
   <strong>Cell:</strong>
-  <%= @user.cell %>
+  <%= @user.cell.name %>
 </p>
 
 <p>
@@ -85,7 +85,7 @@
   <ul>
     <% @historic_boards.each do |historic| %>
       <li><%= Board.find_by(id: historic.board_id).name %></li>
-      <li><%= "De #{l historic.created_at.to_date} até #{l historic.departure}"%></li>
+      <li><%= "De #{ l historic.entry} até #{ l historic.departure}"%></li>
     <% end %>
   </ul>
 </p>
@@ -95,7 +95,7 @@
   <ul>
     <% @historic_cells.each do |historic| %>
       <li><%= Board.find_by(id: historic.cell_id).name %></li>
-      <li><%= "De #{l historic.created_at.to_date} até #{l historic.departure}" %></li>
+      <li><%= "De #{ l historic.entry} até #{ l historic.departure}" %></li>
     <% end %>
   </ul>
 </p>

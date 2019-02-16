@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get "/users/new", to: "users#new"
     post "/users", to: "users#create"
     devise_for :users
-    root to:  "users#index"
+    root to:  "static_pages#home"
     
     get "/artigos", to: "posts#articles", as: "articles"
     get "/artigos/novo", to: "posts#new_article", as: "new_article"

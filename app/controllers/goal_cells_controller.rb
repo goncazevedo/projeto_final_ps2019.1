@@ -1,4 +1,5 @@
 class GoalCellsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_goal_cell, only: [:show, :edit, :update, :destroy]
 
   # GET /goal_cells

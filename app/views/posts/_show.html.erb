@@ -1,0 +1,47 @@
+<% if post.user.photo.present? %>
+  <strong>Photo:</strong>
+  <%= image_tag (post.user.photo.url) %>
+<% end %>
+
+
+<p>
+  <strong>Cargo:</strong>
+  <%= "#{post.user.board_kind} de #{post.user.board.name}" %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= post.user.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= post.title%>
+</p>
+<%= tinymce %>
+
+<p>
+  <strong>Content:</strong>
+  <%= simple_format(post.content) %>
+</p>
+
+<% if post.photo.present? %>
+  <strong>Photo:</strong>
+  <%= image_tag (post.photo.url) %>
+<% end %>
+
+<p>
+  <strong>Date:</strong>
+  <%=l post.created_at.to_date %>
+</p>
+
+<p>likes:<%=post.likes.length%></p>
+
+<p>dislikes:<%=post.dislikes.length%></p>
+
+<p>comentarios<%=post.thread.comments.where(deleted_at: nil).count%></p>
+
+<%= link_to  "show", post %>
+<%if can? :edit, post%>
+  <%= link_to 'Edit', edit_post_path(post) %>
+<%end%>

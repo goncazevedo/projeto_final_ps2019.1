@@ -1,4 +1,5 @@
 class PostTagsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_post_tag, only: [:show, :edit, :update, :destroy]
 
   # GET /post_tags

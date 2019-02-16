@@ -9,53 +9,72 @@ class Ability
       
     if user.accessor?
       #Permissões de acessor (Herança)
-      can [:read], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
+      can [:read, :articles, :forum], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
       can [:manage], Like #Dar Like
       can [:manage], Dislike #Dar Deslike
-      can [:create], Post #Publicar artigos e perguntas
-      can [:edit], Post, user_id: user.id 
-      can [:edit], User, id: user.id
-      #can [:create], Comment #Responder Perguntas
-      #can [:search], Post #Pesquisar Artigo
-      #can [:read], Task (Que ele está incluso) #Dar check nas tarefas do sistema de tarefas
-      #Pode exportar artigo (PDF)
-    
+      can [:new_article, :new_question, :create], Post #Publicar artigos e perguntas
+      if GoalBoard.find_by(board_id: user.board_id)
+        can [:edit], [TaskBoard], goal_board_id: GoalBoard.find_by(board_id: user.board_id).id
+      end
+      can [:manage], Post, user_id: user.id 
+      can [:edit, :update], User, id: user.id
       #Final das Permissões de acessor (Herança)
     end
 
     if user.director?
       #Permissões de Diretor (Herança)
-
-      can [:manage], [Cell, Post, Board]
+      can [:manage], [Cell, Post]
+      can [:manage], [Board], id: user.board_id
+      can [:read], [Board]
       can [:manage], [GoalBoard], board_id: user.board_id
       can [:edit], User, id: user.id
-      #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
+      if GoalBoard.find_by(board_id: user.board_id)
+        can [:manage], TaskBoard, goal_board_id: GoalBoard.where(board_id: user.board_id).ids
+      end
+
 
       #Diretor de Gestão Pessoas
       if user.board_id == Board.find_by(name: "Gestão de Pessoas").id
         can [:manage], User
         can [:manage], Fusion
       end
-
+      if user.board_id == Board.find_by(name: "Projetos").id
+        can [:manage], Project
+      end
       #Final das Permissões de Diretor (Herança)
+
+      #Permissões de acessor (Herança)
+      can [:read, :articles, :forum], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
+      can [:manage], Like #Dar Like
+      can [:manage], Dislike #Dar Deslike
+      can [:new_article, :new_question, :create], Post #Publicar artigos e perguntas
+      if GoalBoard.find_by(board_id: user.board_id)
+        can [:edit], [TaskBoard], goal_board_id: GoalBoard.find_by(board_id: user.board_id).id
+      end
+      can [:manage], Post, user_id: user.id 
+      can [:edit, :update], User, id: user.id
+      #Final das Permissões de acessor (Herança)
     end
 
     if user.manager?
       #Permissões do Gerente da Célula (Herança)
-
       can [:manage], Cell
       can [:manage], GoalCell, cell_id: user.cell_id
-      #Deve ser adicionado ao gerente poder gerenciar tarefas, mas não é no CanCanCan
+      if GoalCell.find_by(cell_id: user.cell_id)
+        can [:manage], TaskCell, goal_cell_id: GoalCell.where(cell_id: user.cell_id).ids
+      end
       
+      #Gerente de PMO
       if user.cell_id == Cell.find_by(name: "PMO")
         can [:manage], Project
       end
-
       #Final das Permissões do Gerente da Célula (Herança)
     end
 
     if user.member?
-
+      if GoalCell.find_by(cell_id: user.cell_id)
+        can [:edit], [TaskCell], goal_cell_id: GoalCell.find_by(cell_id: user.cell_id).id
+      end
     end
 
     # Define abilities for the passed in user here. For example:
