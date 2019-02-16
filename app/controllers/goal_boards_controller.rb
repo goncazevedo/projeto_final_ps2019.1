@@ -61,7 +61,7 @@ class GoalBoardsController < ApplicationController
   def destroy
     @goal_board.destroy
     respond_to do |format|
-      format.html { redirect_to goal_boards_url, notice: 'Goal board was successfully destroyed.' }
+      format.html { redirect_to request.referrer, notice: 'Goal board was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
