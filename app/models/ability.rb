@@ -23,7 +23,8 @@ class Ability
 
     if user.director?
       #Permissões de Diretor (Herança)
-      can [:manage], [Cell, Post]
+      can [:manage], Post, user_id: user.id 
+      can [:manage], [Cell]
       can [:manage], [Board], id: user.board_id
       can [:read], [Board]
       can [:manage], [GoalBoard], board_id: user.board_id
@@ -51,7 +52,6 @@ class Ability
       if GoalBoard.find_by(board_id: user.board_id)
         can [:edit], [TaskBoard], goal_board_id: GoalBoard.find_by(board_id: user.board_id).id
       end
-      can [:manage], Post, user_id: user.id 
       can [:edit, :update], User, id: user.id
       #Final das Permissões de acessor (Herança)
     end
