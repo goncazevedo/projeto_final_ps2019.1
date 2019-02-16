@@ -14,25 +14,15 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
                                  "Y88888P'                    
 */
 
-//  C O N F I G
-$white: #FAFAFA;
-$light-blue: #3b809d;
-$darker-blue: #2D647C;
-$light-gray: #d1d1d1;
-$lighter-gray: #eeeded;
-$gray: #999;
-$black: #010203;
-
-@font-face {
-    font-family: 'Lato';
-    src: asset-url(Lato-Regular)
-}
+@import 'config';
 
 // C O N T E N T
 .content {
     width: 65vw;
     margin: 0 auto;
 }
+
+
 
 .article {
     margin: 5vh auto;
@@ -56,15 +46,31 @@ $black: #010203;
         margin: 5vh auto;
     }
 
+    .photo {
+        display: inline-block;
+        
+        img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        box-shadow: 2px 2px $lighter-gray;
+        }
+
+    }
+
     .item {
         background-color: $lighter-gray;
         padding: 15px;
-        margin: 5px auto;
+        margin: 0 auto;
         border-radius: 15px;
 
         font-family: 'Lato', sans-serif;
         font-size: 1em;
         color: $black;
+
+        display: inline-block;
+        width: 60vw;
+
 
     }
 
@@ -89,20 +95,37 @@ $black: #010203;
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
         font-size: 1em;
+        font-style: normal;
         color: $white;
         
         background-color: $light-blue;
         padding: 10px;
+        margin: 0 5px;
         border-radius: 5px;
         box-shadow: 0px 4px $darker-blue;
 
         float: right;
+
 
         &:link, &:visited {
             text-decoration: none;
             color: $white;
         }
 
+        .options {
+            margin-top: -10px;
+        }
+
+    }
+
+    .search {
+        float: right;
+        
+        form {
+            font-family: $font-lato;
+            font-size: 1em;
+            color: $black;
+        }
     }
 }
 

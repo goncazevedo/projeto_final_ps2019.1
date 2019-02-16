@@ -15,6 +15,15 @@
  *= require_self
  */
  
- body {
-     background-color: #fafafa;
- }
+ html {
+    position: relative;
+    min-height: 100vw;
+}
+body {
+    margin: 0 0 80px; /* bottom = footer height */
+}
+footer {
+
+    height: 80px;
+    width: 100vw;
+}

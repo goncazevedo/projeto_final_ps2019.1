@@ -2,38 +2,45 @@
 
 <div class="content">
 
-  <%= form_tag(articles_path, method: :get) do %>	
-      Filtro:<%= select_tag :tag, options_for_select(tags_select),{:prompt => "escolha uma tag"} %>
-      Titulo:<%= text_field_tag :title,params[:title] %>
-      <%= submit_tag 'Search' , name: nil%>
-  <% end %>
+
 
   <section class="article">
       <h1>Artigos</h1>
       <div class="line"></div>
 
+      <div class="search">
+        <%= form_tag(articles_path, method: :get) do %>	
+            Filtro:<%= select_tag :tag, options_for_select(tags_select),{:prompt => "escolha uma tag"} %>
+            Titulo:<%= text_field_tag :title,params[:title] %>
+            <%= submit_tag 'Search' , name: nil%>
+        <% end %>
+      </div>
 
       <div class="list">
         <% @articles.each do |article| %>
             
-              <div class="photo">
-                <% if article.user.photo.present? %>
-                  <%= image_tag (article.user.photo.url) %>
-                <% end %>
-              </div>
+              <div class="article_box">
+                <div class="photo">
+                  <% if article.user.photo.present? %>
+                    <%= image_tag (article.user.photo.url) %>
+                  <% end %>
+                </div>
 
-              <div class="item">
-              <%= link_to article.title, article, :class => "title" %>
-              <div class="description"> 
-                criado por <%= article.user.name %>, em <%= l article.created_at.to_date%>
-              </div>
+                <div class="item">
+                <%= link_to article.title, article, :class => "title" %>
+                <div class="description"> 
+                  criado por <%= article.user.name %>, em <%= l article.created_at.to_date%>
+                
+                <%if can? :edit, article%>
+                    <%= link_to 'Editar', edit_post_path(article), :class => "button options" %>
+                <%end%>
+                <%if can? :destroy, article%>
+                    <%= link_to 'Apagar', article, :class => "button options", method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
+                <%end%>
+                </div>
 
-              <%if can? :edit, article%>
-                  <%= link_to 'Editar', edit_post_path(article), :class => "button" %>
-              <%end%>
-              <%if can? :destroy, article%>
-                  <%= link_to 'Apagar', article, :class => "button", method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' } %>
-              <%end%>
+                
+                </div>
               </div>
             
         <% end %>

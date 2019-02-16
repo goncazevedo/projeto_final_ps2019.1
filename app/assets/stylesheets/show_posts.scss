@@ -1,0 +1,62 @@
+@import 'config';
+
+// C O N T E N T
+.show_article {
+    width: 60vw;
+    margin: 5% auto;
+    background-color: $lighter-gray;
+    padding: 50px;
+    border-radius: 15px;
+
+    .user_photo {
+        display: inline block;
+
+        img {
+            width: 175px;
+            height: 175px;
+            border-radius: 100%;
+            box-shadow: 2px 2px $light-gray;
+        }
+    }
+
+    .user_box {
+        margin-bottom: 2.5%;
+        line-height: 120%;
+        display: inline block;
+    }
+
+    .user_name {
+        font-family: $font-lato;
+        font-size: 1em;
+        font-weight: bold;
+        color: $black;
+    }
+
+    .user_board {
+        font-family: $font-lato;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        color: $black;
+
+    }
+
+    .post_title {
+        font-family: $font-lato;
+        font-size: 1.25em;
+        font-style: italic;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    .post_content {
+        font-family: $font-lato;
+        font-size: 1em;
+        color: $black;
+    }
+
+    p {
+        font-family: $font-lato;
+    }
+
+}
