@@ -69,7 +69,7 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
         color: $black;
 
         display: inline-block;
-        width: 92%;
+        width: 60vw;
 
 
     }
@@ -116,6 +116,16 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
             margin-top: -10px;
         }
 
+    }
+
+    .search {
+        float: right;
+        
+        form {
+            font-family: $font-lato;
+            font-size: 1em;
+            color: $black;
+        }
     }
 }
 
