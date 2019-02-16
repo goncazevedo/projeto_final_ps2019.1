@@ -35,6 +35,10 @@ class Ability
         can [:manage], Fusion
       end
 
+      if user.board_id == Board.find_by(name: "Projetos").id
+        can[:manage], Project
+      end
+
       #Final das Permissões de Diretor (Herança)
     end
 
