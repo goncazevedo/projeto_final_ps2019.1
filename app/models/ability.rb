@@ -26,8 +26,12 @@ class Ability
       can [:manage], [Cell, Post]
       can [:manage], [Board], id: user.board_id
       can [:read], [Board]
-      can [:manage], [GoalBoard, TaskBoard], board_id: user.board_id
+      can [:manage], [GoalBoard], board_id: user.board_id
       can [:edit], User, id: user.id
+      if GoalBoard.find_by(board_id: user.board_id)
+        can [:manage], TaskBoard, goal_board_id: GoalBoard.where(board_id: user.board_id).ids
+      end
+
 
       #Diretor de Gestão Pessoas
       if user.board_id == Board.find_by(name: "Gestão de Pessoas").id
