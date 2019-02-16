@@ -12,6 +12,7 @@ class Ability
       can [:read, :articles, :forum], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
       can [:manage], Like #Dar Like
       can [:manage], Dislike #Dar Deslike
+      can [:manage], PostTag
       can [:new_article, :new_question, :create], Post #Publicar artigos e perguntas
       if GoalBoard.find_by(board_id: user.board_id)
         can [:edit], [TaskBoard], goal_board_id: GoalBoard.find_by(board_id: user.board_id).id
@@ -28,6 +29,7 @@ class Ability
       can [:manage], [Board], id: user.board_id
       can [:read], [Board]
       can [:manage], [GoalBoard], board_id: user.board_id
+      can [:manage], PostTag
       can [:edit], User, id: user.id
       if GoalBoard.find_by(board_id: user.board_id)
         can [:manage], TaskBoard, goal_board_id: GoalBoard.where(board_id: user.board_id).ids
@@ -52,6 +54,7 @@ class Ability
       if GoalBoard.find_by(board_id: user.board_id)
         can [:edit], [TaskBoard], goal_board_id: GoalBoard.find_by(board_id: user.board_id).id
       end
+
       can [:edit, :update], User, id: user.id
       #Final das Permissões de acessor (Herança)
     end
