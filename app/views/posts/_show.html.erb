@@ -42,4 +42,6 @@
 <p>comentarios<%=post.thread.comments.where(deleted_at: nil).count%></p>
 
 <%= link_to  "show", post %>
-<%= link_to 'Edit', edit_post_path(post) %>
+<%if can? :edit, post%>
+  <%= link_to 'Edit', edit_post_path(post) %>
+<%end%>

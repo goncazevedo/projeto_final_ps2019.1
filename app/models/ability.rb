@@ -12,10 +12,10 @@ class Ability
       can [:read, :articles, :forum], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
       can [:manage], Like #Dar Like
       can [:manage], Dislike #Dar Deslike
-      can [:create], Post #Publicar artigos e perguntas
+      can [:new_article, :new_question, :create], Post #Publicar artigos e perguntas
       can [:edit], [TaskBoard, TaskCell]
-      can [:edit], Post, user_id: user.id 
-      can [:edit], User, id: user.id
+      can [:manage], Post, user_id: user.id 
+      can [:edit, :update], User, id: user.id
       #Pode exportar artigo (PDF)
     
       #Final das Permissões de acessor (Herança)
@@ -36,7 +36,7 @@ class Ability
       end
 
       if user.board_id == Board.find_by(name: "Projetos").id
-        can[:manage], Project
+        can [:manage], Project
       end
 
       #Final das Permissões de Diretor (Herança)
