@@ -61,7 +61,7 @@ class Ability
       can [:manage], Cell
       can [:manage], GoalCell, cell_id: user.cell_id
       if GoalCell.find_by(cell_id: user.cell_id)
-        can [:manage], TaskCell, goal_cell_id: GoalCell.find_by(cell_id: user.cell_id).id
+        can [:manage], TaskCell, goal_cell_id: GoalCell.where(cell_id: user.cell_id).ids
       end
       
       #Gerente de PMO
