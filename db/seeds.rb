@@ -13,10 +13,10 @@
 Board.create(name: 'Gestão de Pessoas', description: 'Diretoria de GP')
 
 Board.create(name: 'Projetos', description: 'Diretoria de Projetos')
-Cell.create(name: 'PMO', description: 'Célula de PMO')
+Cell.create(name: 'PMO', description: 'Célula de PMO', board_id: 2)
 
 Board.create(name: "Financeiro", description: "Diretoria Financeira")
-Cell.create(name: "vazia", description: "Célula Vazia")
+Cell.create(name: "vazia", description: "Célula Vazia", board_id: 2)
 
 User.create(name: "Natalia Coinbra", age: 18, email:"natalia@email.com", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
 

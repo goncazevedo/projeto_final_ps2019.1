@@ -34,6 +34,7 @@ class User < ApplicationRecord
 
   validates :name, :age, :board_id, :board_kind,  presence: true
   validate :age_interval
+  validate :validate_email
   validates :cell_id, :cell_kind, presence: true, if: :projects_board?
 
   enum board_kind: {
@@ -51,9 +52,17 @@ class User < ApplicationRecord
       Board.find_by(name: "projetos")
     end
     
-    def age_interval
+    def age_interval #Validação para saber se o usuário tem entre 0 e 200 anos
       if self.age < 0 || self.age > 200
         errors.add(:age_not_valid, "The age must be between 0 and 200 years")
+      end
+    end
+
+    def validate_email #Validação para saber se o email é @injunior.com.br
+      if a = self.email.index('@')
+        if self.email[a..a+15] != "@injunior.com.br"
+          errors.add(:email_not_injunior, "This email isn't part of a injunior's member")
+        end
       end
     end
 end
