@@ -1,47 +1,50 @@
-<% if post.user.photo.present? %>
-  <strong>Photo:</strong>
-  <%= image_tag (post.user.photo.url) %>
-<% end %>
+<div class="show_article">
+  <div class="user_photo">
+  <% if post.user.photo.present? %>
+    <%= image_tag (post.user.photo.url) %>
+  <% end %>
+  </div>
 
 
-<p>
-  <strong>Cargo:</strong>
-  <%= "#{post.user.board_kind} de #{post.user.board.name}" %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= post.user.name %>
-</p>
+  <div class="user_box">
+    <p class="user_name">
+      <%= post.user.name %>
+    </p>
+    <p class="user_board" >
+    <%= "#{post.user.board_kind} de #{post.user.board.name}" %>
+    </p>
+  </div>
+  
+  <div class="post_photo">
+    <% if post.photo.present? %>
+        <%= image_tag (post.photo.url) %>
+      <% end %>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= post.title%>
-</p>
-<%= tinymce %>
 
-<p>
-  <strong>Content:</strong>
-  <%= simple_format(post.content) %>
-</p>
+  <p class="post_title">
+    <%= post.title%>
+  </p>
+  <%= tinymce %>
 
-<% if post.photo.present? %>
-  <strong>Photo:</strong>
-  <%= image_tag (post.photo.url) %>
-<% end %>
+  <p class="post_content">
+    <%= simple_format(post.content) %>
+  </p>
 
-<p>
-  <strong>Date:</strong>
-  <%=l post.created_at.to_date %>
-</p>
+  
+  <p>
+    <strong>Date:</strong>
+    <%= post.created_at.to_date %>
+  </p>
 
-<p>likes:<%=post.likes.length%></p>
+  <%= button_to 'Curtir', post_likes_path(post), method: :post, :class => "button"%>
+  <p><%= post.likes.length%></p>
 
-<p>dislikes:<%=post.dislikes.length%></p>
-
-<p>comentarios<%=post.thread.comments.where(deleted_at: nil).count%></p>
-
-<%= link_to  "show", post %>
-<%if can? :edit, post%>
-  <%= link_to 'Edit', edit_post_path(post) %>
-<%end%>
+  <%= button_to 'Descurtir', post_dislikes_path(post), method: :post, :class => "button" %>
+  <p><%= post.dislikes.length%></p>
+  <%= link_to  "show", post %>
+  <%if can? :edit, post%>
+    <%= link_to 'Edit', edit_post_path(post) %>
+  <%end%>
+</div>
