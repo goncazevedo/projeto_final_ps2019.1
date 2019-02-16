@@ -1,5 +1,6 @@
-<h1>Nova Pergunta</h1>
+<div class="new_topic">
+    <h1>Novo tópico</h1>
+    <div class="line"></div>
 
-<%= render 'form', {post: @question, kind: "question"} %>
-
-<%= link_to 'Back', forum_path %>
+    <%= render 'form', {post: @question, kind: "question"} %>
+</div>
