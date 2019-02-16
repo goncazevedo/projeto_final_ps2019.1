@@ -22,6 +22,8 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
     margin: 0 auto;
 }
 
+
+
 .article {
     margin: 5vh auto;
 
@@ -44,15 +46,31 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
         margin: 5vh auto;
     }
 
+    .photo {
+        display: inline-block;
+        
+        img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        box-shadow: 2px 2px $lighter-gray;
+        }
+
+    }
+
     .item {
         background-color: $lighter-gray;
         padding: 15px;
-        margin: 5px auto;
+        margin: 0 auto;
         border-radius: 15px;
 
         font-family: 'Lato', sans-serif;
         font-size: 1em;
         color: $black;
+
+        display: inline-block;
+        width: 92%;
+
 
     }
 
@@ -77,10 +95,12 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
         text-transform: uppercase;
         font-family: 'Lato', sans-serif;
         font-size: 1em;
+        font-style: normal;
         color: $white;
         
         background-color: $light-blue;
         padding: 10px;
+        margin: 0 5px;
         border-radius: 5px;
         box-shadow: 0px 4px $darker-blue;
 
