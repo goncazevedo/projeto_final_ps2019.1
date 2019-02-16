@@ -8,9 +8,21 @@
     padding: 50px;
     border-radius: 15px;
 
+    .user_photo {
+        display: inline block;
+
+        img {
+            width: 175px;
+            height: 175px;
+            border-radius: 100%;
+            box-shadow: 2px 2px $light-gray;
+        }
+    }
+
     .user_box {
         margin-bottom: 2.5%;
         line-height: 120%;
+        display: inline block;
     }
 
     .user_name {
