@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :set_old_board, only: [:update]
   before_action :set_old_cell, only: [:update]
@@ -104,7 +105,7 @@ class UsersController < ApplicationController
 
     def entry_time_board
       if @user.historic_boards == []
-        return created_at
+        return @user.created_at
       else
         return @user.historic_boards.last.departure
       end
@@ -112,7 +113,7 @@ class UsersController < ApplicationController
     
     def entry_time_cell
       if @user.historic_cells == []
-        return created_at
+        return @user.created_at
       else
         return @user.historic_cells.last.departure
       end

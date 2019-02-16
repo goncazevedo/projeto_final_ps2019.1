@@ -42,15 +42,20 @@
   </p>
 <% end %>
 
-
 <p>Metas em Andamento</p>
 <ul>
   <% @goals.each do |goal| %>
     <li><strong>Name: </strong><%= goal.name %></li>
     <li><strong>Deadline: </strong><%= goal.deadline %></li>
-    <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
-    <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
-    <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <%if can? :read, goal%>
+      <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
+    <%end%>
+    <%if can? :edit, goal%>
+      <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
+    <%end%>
+    <%if can? :destroy, goal%>
+      <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <%end%>
   <% end %>
 </ul>
 
@@ -60,9 +65,15 @@
     <ul>
       <li><strong>Name: </strong><%= goal.name %></li>
       <li><strong>Deadline: </strong><%= goal.deadline %></li>
-      <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
-      <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
-      <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <%if can? :read, goal%>
+        <li><%= link_to "Show", {:controller => "goal_boards", :action => "show", :id => goal.id} %></li>
+      <%end%>
+      <%if can? :edit, goal%>
+        <li><%= link_to "Edit", {:controller => "goal_boards", :action => "edit", :board => @board.id, :id => goal.id } %></li>
+      <%end%>
+      <%if can? :destroy, goal%>
+        <li><%= link_to "Destroy", goal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <%end%>
     </ul>
   <% end %>
 </p>

@@ -1,4 +1,5 @@
 class FusionsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_fusion, only: [:show, :edit, :update, :destroy]
 
   # GET /fusions

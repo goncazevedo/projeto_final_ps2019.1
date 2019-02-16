@@ -9,15 +9,13 @@ class Ability
       
     if user.accessor?
       #Permissões de acessor (Herança)
-      can [:read], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
+      can [:read, :articles, :forum], [Board, Cell, GoalBoard, GoalCell, Post, Project, User] #read Padrão
       can [:manage], Like #Dar Like
       can [:manage], Dislike #Dar Deslike
-      can [:create], Post #Publicar artigos e perguntas
-      can [:edit], Post, user_id: user.id 
-      can [:edit], User, id: user.id
-      #can [:create], Comment #Responder Perguntas
-      #can [:search], Post #Pesquisar Artigo
-      #can [:read], Task (Que ele está incluso) #Dar check nas tarefas do sistema de tarefas
+      can [:new_article, :new_question, :create], Post #Publicar artigos e perguntas
+      can [:edit], [TaskBoard, TaskCell]
+      can [:manage], Post, user_id: user.id 
+      can [:edit, :update], User, id: user.id
       #Pode exportar artigo (PDF)
     
       #Final das Permissões de acessor (Herança)
@@ -27,7 +25,7 @@ class Ability
       #Permissões de Diretor (Herança)
 
       can [:manage], [Cell, Post, Board]
-      can [:manage], [GoalBoard], board_id: user.board_id
+      can [:manage], [GoalBoard, TaskBoard], board_id: user.board_id
       can [:edit], User, id: user.id
       #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
 
@@ -35,6 +33,10 @@ class Ability
       if user.board_id == Board.find_by(name: "Gestão de Pessoas").id
         can [:manage], User
         can [:manage], Fusion
+      end
+
+      if user.board_id == Board.find_by(name: "Projetos").id
+        can [:manage], Project
       end
 
       #Final das Permissões de Diretor (Herança)
@@ -45,6 +47,9 @@ class Ability
 
       can [:manage], Cell
       can [:manage], GoalCell, cell_id: user.cell_id
+      if GoalCell.find_by(cell_id: user.cell_id)
+        can [:manage], TaskCell, goal_cell_id: GoalCell.find_by(cell_id: user.cell_id).id
+      end
       #Deve ser adicionado ao gerente poder gerenciar tarefas, mas não é no CanCanCan
       
       if user.cell_id == Cell.find_by(name: "PMO")
