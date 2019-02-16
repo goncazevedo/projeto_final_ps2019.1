@@ -30,6 +30,7 @@ class TaskBoardsController < ApplicationController
 
     respond_to do |format|
       if @task_board.save
+        goal_finished
         format.html { redirect_to @task_board, notice: 'Task board was successfully created.' }
         format.json { render :show, status: :created, location: @task_board }
       else
@@ -44,6 +45,7 @@ class TaskBoardsController < ApplicationController
   def update
     respond_to do |format|
       if @task_board.update(task_board_params)
+        goal_finished
         format.html { redirect_to @task_board, notice: 'Task board was successfully updated.' }
         format.json { render :show, status: :ok, location: @task_board }
       else
@@ -72,5 +74,20 @@ class TaskBoardsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_board_params
       params.require(:task_board).permit(:name, :description, :finished, :goal_board_id)
+    end
+
+    def goal_finished
+      @task_board.goal_board.task_boards.each do |task|
+        tasks_finisheds = true
+        if task.finished == false
+          tasks_finisheds = false
+        end
+
+        if tasks_finisheds == true
+          @task_board.goal_board.update(name: @task_board.goal_board.name, deadline: @task_board.goal_board.deadline, finished: true, board_id: @task_board.goal_board.board_id)
+        else
+          @task_board.goal_board.update(name: @task_board.goal_board.name, deadline: @task_board.goal_board.deadline, finished: false, board_id: @task_board.goal_board.board_id)
+        end
+      end
     end
 end
