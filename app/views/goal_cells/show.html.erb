@@ -48,7 +48,7 @@
   <% end %>
 </p>
 
-<p>Criar Nova Tarefa</p>
-<%= render 'task_cells/form', {task_cell: TaskCell.new} %>
-
-<%= link_to 'Back', cell_path(@goal_cell.cell) %>
+<% if @goal_cell.finished == false %>
+  <p>Criar Nova Tarefa</p>
+  <%= render 'task_cells/form', {task_cell: TaskCell.new} %>
+<% end %>

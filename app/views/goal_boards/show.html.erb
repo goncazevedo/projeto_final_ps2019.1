@@ -48,7 +48,7 @@
   <% end %>
 </p>
 
-<p>Criar Nova Tarefa</p>
-<%= render 'task_boards/form', {task_board: TaskBoard.new} %>
-
-<%= link_to 'Back', board_path(@goal_board.board) %>
+<% if @goal_board.finished == false %>
+  <p>Criar Nova Tarefa</p>
+  <%= render 'task_boards/form', {task_board: TaskBoard.new} %>
+<% end %>

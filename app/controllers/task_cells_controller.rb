@@ -30,6 +30,7 @@ class TaskCellsController < ApplicationController
 
     respond_to do |format|
       if @task_cell.save
+        goal_finished #Função para fazer com que a meta seja finalizada automaticamente quando todas as tarefas foram finalizadas
         format.html { redirect_to @task_cell, notice: 'Task cell was successfully created.' }
         format.json { render :show, status: :created, location: @task_cell }
       else
@@ -44,6 +45,7 @@ class TaskCellsController < ApplicationController
   def update
     respond_to do |format|
       if @task_cell.update(task_cell_params)
+        goal_finished #Função para fazer com que a meta seja finalizada automaticamente quando todas as tarefas foram finalizadas
         format.html { redirect_to @task_cell, notice: 'Task cell was successfully updated.' }
         format.json { render :show, status: :ok, location: @task_cell }
       else
@@ -73,4 +75,19 @@ class TaskCellsController < ApplicationController
     def task_cell_params
       params.require(:task_cell).permit(:name, :description, :finished, :goal_cell_id)
     end
+
+    def goal_finished #Função para fazer com que a meta seja finalizada automaticamente quando todas as tarefas foram finalizadas
+      @tasks_finisheds = true
+      @task_cell.goal_cell.task_cells.each do |task|  
+        if task.finished == false
+          @tasks_finisheds = false
+        end
+      end
+      if @tasks_finisheds == true
+        @task_cell.goal_cell.update(name: @task_cell.goal_cell.name, deadline: @task_cell.goal_cell.deadline, finished: true, cell_id: @task_cell.goal_cell.cell_id)
+      else
+        @task_cell.goal_cell.update(name: @task_cell.goal_cell.name, deadline: @task_cell.goal_cell.deadline, finished: false, cell_id: @task_cell.goal_cell.cell_id)
+      end
+    end
+    
 end
