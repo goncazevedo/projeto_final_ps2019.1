@@ -78,8 +78,11 @@
   <% end %>
 </p>
 
-<%= "Adicionar Meta" %>
-<%= render 'goal_boards/form', {board: @board, goal_board: GoalBoard.new} %>
+<% if can? :manage, @board %>
+  <%= "Adicionar Meta" %>
+  <%= render 'goal_boards/form', {board: @board, goal_board: GoalBoard.new} %>
+<% end %>
 
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+<% if can? :update, @board %>
+  <%= link_to 'Edit', edit_board_path(@board) %>
+<% end %>

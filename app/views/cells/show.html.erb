@@ -63,8 +63,11 @@
   <% end %>
 </p>
 
-<%= "Adicionar Meta" %>
-<%= render 'goal_cells/form', {cell: @cell, goal_cell: GoalCell.new} %>
+<% if can? :manage, @cell %>
+  <%= "Adicionar Meta" %>
+  <%= render 'goal_cells/form', {cell: @cell, goal_cell: GoalCell.new} %>
+<% end %>
 
-<%= link_to 'Edit', edit_cell_path(@cell) %> |
-<%= link_to 'Back', cells_path %>
+<% if can? :update, @cell %>
+  <%= link_to 'Edit', edit_cell_path(@cell) %>
+<% end %>
