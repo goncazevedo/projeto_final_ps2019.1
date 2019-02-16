@@ -46,32 +46,42 @@ d8(  888   888       888 .  888  `88bod8P'  888   888 o.  )88b
         margin: 5vh auto;
     }
 
-    .photo {
-        display: inline-block;
-        
-        img {
-        width: 60px;
-        height: 60px;
-        border-radius: 100%;
-        box-shadow: 2px 2px $lighter-gray;
+    .article_box {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 10px 0;
+
+        .photo {
+            flex-grow: 0;
+            
+            img {
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            box-shadow: 2px 2px $lighter-gray;
+            margin-right: 10px;
+            margin-top: 10px;
+            }
+
         }
 
-    }
-
-    .item {
-        background-color: $lighter-gray;
-        padding: 15px;
-        margin: 0 auto;
-        border-radius: 15px;
-
-        font-family: 'Lato', sans-serif;
-        font-size: 1em;
-        color: $black;
-
-        display: inline-block;
-        width: 60vw;
+        .item {
+            flex-grow: 2;
 
 
+            background-color: $lighter-gray;
+            padding: 15px;
+            margin: 0 auto;
+            border-radius: 15px;
+
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            color: $black;
+
+            
+
+
+        }
     }
 
     .description {

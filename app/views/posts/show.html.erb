@@ -57,10 +57,10 @@
     <%= @post.created_at.to_date %>
   </p>
 
-  <%= button_to 'Like', post_likes_path(@post), method: :post %>
+  <%= button_to 'Curtir', post_likes_path(@post), method: :post, :class => "button"%>
   <p><%=@post.likes.length%></p>
 
-  <%= button_to 'Dislike', post_dislikes_path(@post), method: :post %>
+  <%= button_to 'Descurtir', post_dislikes_path(@post), method: :post, :class => "button" %>
   <p><%=@post.dislikes.length%></p>
 
   <%= commontator_thread(@post) %>
