@@ -25,7 +25,7 @@ class Ability
       #Permissões de Diretor (Herança)
 
       can [:manage], [Cell, Post, Board]
-      can [:manage], [GoalBoard], board_id: user.board_id
+      can [:manage], [GoalBoard, TaskBoard], board_id: user.board_id
       can [:edit], User, id: user.id
       #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
 
