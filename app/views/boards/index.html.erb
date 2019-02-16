@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
+<section class="boards">
+  <p id="notice"><%= notice %></p>
 
-<h1>Boards</h1>
+  <h1 class="boards_title">Diretorias</h1>
+  <div class="boards_line"></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @boards.each do |board| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= board.name %></td>
-        <td><%= board.description %></td>
-        <td><%= "Membros #{User.where(board_id: board.id).length}" %> </td>
-        <td><%= "Metas #{board.goal_boards.length}"%></td>
-        <td><%= link_to 'Show', board %></td>
-        <td><%= link_to 'Edit', edit_board_path(board) %></td>
-        <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th></th>
+        <th></th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+      <% @boards.each do |board| %>
+        <tr>
+          <div class="board_content">
+            <div class="board_name"><p><%= board.name %></p></div>
+            <div class="board_edit"><p><%= link_to image_tag('edit.svg', :alt => 'Edit', :class => "board_icon"), edit_board_path(board) %></p></div>
+            <div class="board_destroy"><p><%= link_to image_tag('delete.svg', :alt => "Destroy", :class => "board_icon"), board, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+            <div class="board_description"><p><%= board.description %></p></div>
+            <div class="board_id"><p><%= "Membros #{User.where(board_id: board.id).length}" %></p></div>
+            <div class="board_goal"><p><%= "Metas #{board.goal_boards.length}"%></p></div>
+            <div class="board_more"><p><%= link_to 'Ver Detalhes', board %></p></div>
+          </div>
+        </tr>
+      <% end %>
+  </table>
 
-<%= link_to 'New Board', new_board_path %>
+  <br>
+
+  <div class="boards_link_new"><%= link_to 'Nova Diretoria', new_board_path %></div>
+</section>
