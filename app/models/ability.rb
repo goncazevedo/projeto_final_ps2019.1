@@ -47,7 +47,9 @@ class Ability
 
       can [:manage], Cell
       can [:manage], GoalCell, cell_id: user.cell_id
-      can [:manage], TaskCell, cell_id: user.cell_id
+      if GoalCell.find_by(cell_id: user.cell_id)
+        can [:manage], TaskCell, goal_cell_id: GoalCell.find_by(cell_id: user.cell_id).id
+      end
       #Deve ser adicionado ao gerente poder gerenciar tarefas, mas não é no CanCanCan
       
       if user.cell_id == Cell.find_by(name: "PMO")
