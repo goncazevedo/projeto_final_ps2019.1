@@ -20,7 +20,7 @@ Cell.create(name: "vazia", description: "Célula Vazia", board_id: 2)
 
 User.create(name: "Natalia Coinbra", age: 18, email:"natalia@injunior.com.br", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
 
-User.create(name: "admin", age: 100, email: "admin@injunior.com.br", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false)
+User.create(name: "admin", age: 100, email: "admin@injunior.com.br", password: "123456", board_id: 1, board_kind: 0, cell_id: 1, cell_kind: 0, creation_cell: false, admin: true) 
 
 GoalBoard.create(name: "Terminar Projeto", deadline: "2019-02-12",finished: false, board_id: 1)
 
