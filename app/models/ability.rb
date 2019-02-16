@@ -25,8 +25,11 @@ class Ability
       #Permissões de Diretor (Herança)
 
       can [:manage], [Cell, Post, Board]
-      can [:manage], [GoalBoard, TaskBoard], board_id: user.board_id
+      can [:manage], [GoalBoard], board_id: user.board_id
       can [:edit], User, id: user.id
+      if GoalBoard.find_by(board_id: user.board_id)
+        can [:manage], TaskBoard, goal_board_id: GoalBoard.where(board_id: user.board_id).ids
+      end
       #Deve ser adicionado ao diretor poder gerenciar tarefas, mas não é no CanCanCan
 
       #Diretor de Gestão Pessoas
@@ -48,7 +51,7 @@ class Ability
       can [:manage], Cell
       can [:manage], GoalCell, cell_id: user.cell_id
       if GoalCell.find_by(cell_id: user.cell_id)
-        can [:manage], TaskCell, goal_cell_id: GoalCell.find_by(cell_id: user.cell_id).id
+        can [:manage], TaskCell, goal_cell_id: GoalCell.where(cell_id: user.cell_id).ids
       end
       #Deve ser adicionado ao gerente poder gerenciar tarefas, mas não é no CanCanCan
       
