@@ -1,106 +1,127 @@
 <p id="notice"><%= notice %></p>
 
+<div class="circle">
+  <% if @user.photo.present? %>
+    <strong></strong>
+    <%= image_tag (@user.photo.url), class: "user_photo" %>
+  <% end %>
+</div>
+
 <% if fusion? %>
   <%= @user.name + " está em fusão da diretoria " + Board.find_by(id: @user.board_id).name + " para " + board_fusion.name %>
 <% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="user_name">
+  <p id="name">
+    <strong></strong>
+    <%= @user.name %> ,
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
+  <p id="age">
+    <strong></strong>
+    <%= @user.age %>
+  </p>
+</div>
 
-<p>
-  <strong>Board:</strong>
-  <%= @user.board.name %>
-</p>
-
-<p>
-  <strong>Board kind:</strong>
-  <%= @user.board_kind %>
-</p>
-
-<p>
-  <strong>Cell:</strong>
-  <%= @user.cell.name %>
-</p>
-
-<p>
-  <strong>Cell kind:</strong>
-  <%= @user.cell_kind %>
-</p>
-
-<% if @user.photo.present? %>
-  <strong>Photo:</strong>
-  <%= image_tag (@user.photo.url) %>
-<% end %>
-
-<p>
-  <strong>Creation cell:</strong>
-  <%= @user.creation_cell %>
-</p>
-
-<p>
-  <strong>Projects</strong>
-  <ul>
-    <% @projects.each do |project| %>
-      <li><%= link_to project.title, project %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <strong>Projects Finisheds</strong>
-  <ul>
-    <% @projects_finisheds.each do |project| %>
-      <li><%= link_to project.title, project %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <strong>Articles</strong>
-  <ul>
-    <% @articles.each do |article| %>
-      <li><%= link_to article.title, article %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <strong>Questions on Forum</strong>
-  <ul>
-    <% @questions.each do |question| %>
-      <li><%= link_to question.title, question %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <strong>Histórico de Diretorias</strong>
-  <ul>
-    <% @historic_boards.each do |historic| %>
-      <li><%= Board.find_by(id: historic.board_id).name %></li>
-      <li><%= "De #{ l historic.entry} até #{ l historic.departure}"%></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <strong>Histórico de Células</strong>
-  <ul>
-    <% @historic_cells.each do |historic| %>
-      <li><%= Board.find_by(id: historic.cell_id).name %></li>
-      <li><%= "De #{ l historic.entry} até #{ l historic.departure}" %></li>
-    <% end %>
-  </ul>
-</p>
 
 <%if can? :edit, @user%>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to image_tag('edit.svg', :class => "user_icon") %>
 <%end%>
-<%= link_to 'Back', users_path %>
+
+
+<div class="user_board">
+  <p>
+    <strong></strong>
+    <%= @user.board.name %>
+  </p>
+
+  <p>
+    <strong></strong>
+    <%= @user.board_kind %>
+  </p>
+
+  <p>
+    <strong></strong>
+    <%= @user.cell.name %>
+  </p>
+
+  <p>
+    <strong></strong>
+    <%= @user.cell_kind %>
+  </p>
+
+  <p>
+    <strong>Creation cell:</strong>
+    <%= @user.creation_cell %>
+  </p>
+</div>
+
+
+
+<div class="user_article">
+  <p>
+    <strong class="article">Articles</strong>
+    <ul>
+      <% @articles.each do |article| %>
+        <li><%= link_to article.title, article %></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
+
+<div class="user_questions">
+  <p>
+    <strong class="questions">Questões no fórum</strong>
+    <ul>
+      <% @questions.each do |question| %>
+        <li><%= link_to question.title, question %></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
+
+<div class="user_projects">
+  <p class="projects">
+    <strong >Projects</strong>
+    <ul>
+      <% @projects.each do |project| %>
+        <li><%= link_to project.title, project %></li>
+      <% end %>
+    </ul>
+  </p>
+
+  <p>
+    <strong class="end_projects">Projects Finisheds</strong>
+
+    <ul>
+      <% @projects_finisheds.each do |project| %>
+        <li><%= link_to project.title, project %></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
+
+<div class="user_history">
+  <p class="history_board">
+    <strong >Histórico de Diretorias</strong>
+    <ul>
+      <% @historic_boards.each do |historic| %>
+        <li><%= Board.find_by(id: historic.board_id).name %></li>
+        <li><%= "De #{ l historic.entry} até #{ l historic.departure}"%></li>
+      <% end %>
+    </ul>
+  </p>
+
+  <p class="history_cell">
+    <strong >Histórico de Células</strong>
+
+    <ul>
+      <% @historic_cells.each do |historic| %>
+        <li><%= Board.find_by(id: historic.cell_id).name %></li>
+        <li><%= "De #{ l historic.entry} até #{ l historic.departure}" %></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
+
+
